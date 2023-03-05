@@ -1,6 +1,4 @@
 import includePartials from 'gulp-file-include';
-import webHtmlNosvg from 'gulp-webp-html-nosvg';
-import srcSet from 'gulp-sugar-srcset';
 import versionNumber from 'gulp-version-number';
 export const html = () => {
   return (
