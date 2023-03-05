@@ -3,11 +3,16 @@
 }
 
 body {
-  font-family: 'Basier Square';
+  font-family: BasierSquare;
   background: #000000;
   color: #fff;
+  font-weight: 400;
 }
 
 .wrapper {
   overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }
