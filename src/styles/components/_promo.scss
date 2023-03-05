@@ -1,0 +1,26 @@
+.promo {
+  &__top {
+    position: relative;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__top-container {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__top-label {
+    font-weight: 600;
+    font-size: toIndex(23);
+    line-height: 99%;
+    letter-spacing: -0.033em;
+    text-transform: uppercase;
+    color: #b6ff7d;
+  }
+}

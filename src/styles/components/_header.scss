@@ -1,5 +1,5 @@
 .header {
-  padding: 55px 0 60px;
+  padding: toIndex(55) 0 toIndex(60);
   &__container {
     display: flex;
     align-items: center;
@@ -7,7 +7,7 @@
   }
   &__logo {
     display: block;
-    width: 108px;
+    width: toIndex(108);
     img {
       display: block;
       width: 100%;
@@ -22,10 +22,13 @@
     align-items: center;
     gap: 20px;
     font-weight: 700;
-    font-size: 18px;
+    font-size: toIndex(18);
     line-height: 133%;
     letter-spacing: 0.39em;
     text-transform: uppercase;
     color: #ffffff;
+    svg {
+      width: toIndex(46);
+    }
   }
 }
