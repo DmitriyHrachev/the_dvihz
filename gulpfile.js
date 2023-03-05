@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import { path } from './gulp/config/path.js';
-import inlineResize from 'gulp-inline-resize';
 import { plugins } from './gulp/config/plugins.js';
 global.app = {
   path,
