@@ -1,144 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="@styles/main.min.css" />
-  </head>
-  <body>
-    <!-- SCENE A1G -->
-    <div class="scene scene-a1g">
-      <div class="scene-a1g__bg"></div>
-      <h1 class="scene-a1g__title">A1G</h1>
-    </div>
 
-    <!-- SCENE SHUTTER -->
-    <div class="scene scene-shutter">
-      <div class="scene-shutter__bg" data-bg></div>
-      <div class="scene-shutter__line scene-shutter--width-1" data-line></div>
-      <div class="scene-shutter__line scene-shutter--width-2" data-line></div>
-      <div class="scene-shutter__line scene-shutter--width-3" data-line></div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="@styles/main.min.css" />
+</head>
 
-    <!-- NOISE BG -->
-    <div class="scene scene-noise-bg">
-      <div class="scene-noise-bg__bg">
-        <img src="img/bg1.png" alt="" />
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-1"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-2"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-3"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-4"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-5"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-6"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-7"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-8"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-9"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-10"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-11"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-12"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-13"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-14"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-15"></div>
-        <div class="scene-noise-bg__overlay scene-noise-bg--overlay-16"></div>
-      </div>
-    </div>
+<body>
 
-    <!-- SCENE Algorithm -->
-    <div class="scene scene-algorithm">
-      <h2 class="scene-algorithm__title">Algorithm inc.</h2>
-      <h2 class="scene-algorithm__title scene-algorithm__title--clip">
-        Algorithm inc.
-      </h2>
-      <h2 class="scene-algorithm__title">Algorithm inc.</h2>
-      <h2 class="scene-algorithm__title scene-algorithm__title--clip">
-        Algorithm inc.
-      </h2>
-      <h2 class="scene-algorithm__title">Algorithm inc.</h2>
-    </div>
+  <div class="wrapper">
+    @@include('./partials/header.html')
+  </div>
 
-    <!-- SCENE Creative Media -->
-    <div class="scene scene-creative">
-      <div class="scene-creative__bg scene-creative__bg-color"></div>
-      <!-- <div class="scene-creative__bg scene-creative__bg-img">
-        <img src="files/bg2.png" alt="" />
-      </div> -->
-      <div class="scene-creative__yellow-bg"></div>
-      <div class="scene__wrap scene-creative__wrap" data-title-wrap>
-        <h2 class="scene__title scene__title--big-title" data-title>
-          Creative
-        </h2>
-        <h2 class="scene__title scene__title--big-title" data-title>Minds</h2>
-      </div>
-    </div>
+  <script src="@js/main.min.js"></script>
+</body>
 
-    <!-- SCENE Accelerate Web3 -->
-    <div class="scene scene-accelerate">
-      <div class="scene__wrap">
-        <h2 class="scene__title" data-title="">Accelerate Web3</h2>
-        <h2 class="scene__title" data-title="">adoption</h2>
-      </div>
-    </div>
-
-    <!-- SCENE  Digital Identity-->
-    <div class="scene scene-digital">
-      <div class="scene__wrap" data-wrap>
-        <h2 class="scene__title scene__title--big-title" data-title>
-          Digital Identity
-        </h2>
-        <h2 class="scene__title scene__title--big-title" data-title>
-          & Ownership
-        </h2>
-      </div>
-    </div>
-
-    <!-- SCENE Endless possibilities -->
-    <div class="scene scene-posib">
-      <div class="scene__wrap" data-wrap>
-        <h2 class="scene__title" data-title>Endless possibilities</h2>
-        <h2 class="scene__title" data-title>in the metaverse</h2>
-      </div>
-    </div>
-
-    <!-- SCENE VR -->
-    <div class="scene scene-vr">
-      <div class="scene__wrap">
-        <h2 class="scene__title scene__title--big-title" data-title>Virtual</h2>
-        <h2 class="scene__title scene__title--big-title" data-title>Reality</h2>
-      </div>
-    </div>
-
-    <!-- SCENE GAMING -->
-    <div class="scene scene-gaming">
-      <div class="scene__wrap" data-wrap>
-        <h2 class="scene__title scene__title--big-title" data-title>
-          Disruptive
-        </h2>
-        <h2 class="scene__title scene__title--big-title" data-title>Gaming</h2>
-      </div>
-    </div>
-
-    <!-- SCENE A1G BIG -->
-
-    <div class="scene scene-a1g-big">
-      <div class="scene__wrap" data-wrap>
-        <h2 class="scene-a1g-big__title" data-title>A1G</h2>
-      </div>
-    </div>
-
-    <!-- SCENE COPURIGHTS -->
-    <div class="scene scene-copy">
-      <div class="scene__wrap" data-wrap>
-        <h2 class="scene-copy__name" data-name>Algorithm inc.</h2>
-        <h2 class="scene-copy__title scene-copy__title--clip" data-title>
-          Registered in Dubai Silicon Oasis
-        </h2>
-        <a class="scene-copy__title" href="mailto:info@a1g.io" data-email
-          >INFO@A1G.IO</a
-        >
-      </div>
-    </div>
-    <script src="@js/main.min.js"></script>
-  </body>
 </html>
