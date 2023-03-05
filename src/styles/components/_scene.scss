@@ -1,0 +1,44 @@
+.scene {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  &__wrap {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__title {
+    // width: 100%;
+    // position: absolute;
+    font-family: 'Furore';
+    // font-size: toIndex(72);
+    font-size: 3.75vw;
+    line-height: 1.152;
+    text-align: center;
+    color: #ffffff;
+    &:nth-child(1) {
+      transform-origin: center bottom;
+      // bottom: 50%;
+    }
+    &:nth-child(2) {
+      transform-origin: center top;
+      // top: 50%;
+    }
+  }
+}
+@media (orientation: portrait) {
+  .scene {
+    &__title {
+      font-size: 5.5vw;
+      &--big-title {
+        font-size: 8.5vw;
+      }
+    }
+  }
+}
