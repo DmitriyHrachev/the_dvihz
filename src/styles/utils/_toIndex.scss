@@ -2,3 +2,12 @@
   $resValue: calc((var(--vw, 1vw) + var(--vh, 1vh)) * (#{$value} / 30));
   @return $resValue;
 }
+
+@function toIndexMob($value) {
+  $resValue: calc((var(--vw, 1vw) + var(--vh, 1vh)) * (#{$value} / 11.87));
+  @return $resValue;
+}
+@function toIndexTab($value) {
+  $resValue: calc((var(--vw, 1vw) + var(--vh, 1vh)) * (#{$value} / 8.88));
+  @return $resValue;
+}

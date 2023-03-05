@@ -1,4 +1,8 @@
 .container {
   padding: 0 toIndex(100);
   width: 100%;
+
+  @media (max-width: 767px) {
+    padding: 0 25px;
+  }
 }
