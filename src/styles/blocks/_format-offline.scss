@@ -1,0 +1,136 @@
+.format-offline {
+  padding: toIndexMob(80) 0;
+  font-family: 'Basier Square';
+  overflow: hidden;
+  color: #000;
+  background-color: #b6ff7d;
+  &__title-wrap {
+    margin-bottom: toIndexMob(65);
+  }
+  &__subtitle {
+    margin-bottom: toIndexMob(15);
+    font-weight: 600;
+    font-size: toIndexMob(16);
+    line-height: 133%;
+    /* or 21px */
+
+    letter-spacing: -0.033em;
+  }
+  &__title {
+    max-width: toIndexMob(350);
+    font-weight: 600;
+    font-size: toIndexMob(62);
+    line-height: 96%;
+    /* or 60px */
+
+    letter-spacing: -0.033em;
+  }
+  &__list {
+    padding-right: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+}
+.format-offline-card {
+  flex-shrink: 0;
+  width: toIndexMob(315);
+  aspect-ratio: 1;
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  //   line-height: 96%;
+
+  letter-spacing: -0.033em;
+  transition: $transition;
+  &:not(:last-child) {
+    margin-right: -5.35vw;
+  }
+  &--active {
+    background: #000;
+    color: #b6ff7d;
+  }
+  &__title {
+    max-width: toIndexMob(200);
+    font-weight: 600;
+    font-size: toIndexMob(28);
+
+    text-transform: uppercase;
+  }
+  &__text {
+    max-width: toIndexMob(150);
+    font-weight: 500;
+    font-size: toIndexMob(14);
+    line-height: 96%;
+  }
+  &__slash {
+    font-weight: 600;
+    font-size: toIndexMob(10);
+  }
+  &__goal {
+    max-width: toIndexMob(105);
+    font-weight: 600;
+    font-size: toIndexMob(14);
+
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .format-offline {
+    padding: toIndex(225) 0;
+    .container {
+      position: relative;
+      padding-right: 0;
+    }
+    &__title-wrap {
+      margin-right: toIndex(-655 / 2);
+      margin-bottom: toIndex(65);
+    }
+    &__subtitle {
+      position: absolute;
+      font-size: toIndex(33);
+    }
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: toIndex(1100);
+      font-size: toIndex(133);
+    }
+    &__list {
+      padding-left: calc(50vw);
+    }
+  }
+  .format-offline-card {
+    width: toIndex(655);
+    gap: toIndex(35);
+
+    &:first-child {
+      margin-left: toIndex(-655 / 2);
+    }
+    &:not(:last-child) {
+      margin-right: toIndex(-40);
+    }
+    &__title {
+      max-width: toIndex(415);
+      font-size: toIndex(56);
+    }
+    &__text {
+      max-width: toIndex(290);
+
+      font-size: toIndex(21);
+    }
+    &__slash {
+      font-size: toIndex(21);
+    }
+    &__goal {
+      max-width: toIndex(200);
+      font-size: toIndex(26);
+    }
+  }
+}
