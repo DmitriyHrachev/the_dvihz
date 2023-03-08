@@ -1,6 +1,6 @@
 .quality {
-  padding-top: 150px;
-  padding-bottom: 85px;
+  padding-top: toIndexMob(150);
+  padding-bottom: toIndexMob(85);
   color: #fff;
   position: relative;
   &__title {
