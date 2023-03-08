@@ -119,6 +119,14 @@
     &--accent {
       grid-column: 1;
       grid-row: span 2;
+      .stat-card__title {
+        margin-bottom: toIndex(30);
+        font-size: toIndex(166);
+      }
+      .stat-card__text {
+        max-width: toIndex(380);
+        font-size: toIndex(32);
+      }
     }
   }
 }
