@@ -30,9 +30,9 @@
   position: relative;
   background: #ffffff;
   &__title {
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(75);
     line-height: 113%;
     /* identical to box height, or 87px */
@@ -63,9 +63,9 @@
     margin-left: auto;
     width: max-content;
     align-self: flex-end;
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: toIndexMob(18);
     line-height: 99%;
     /* identical to box height, or 18px */
@@ -84,9 +84,9 @@
   }
   &__text {
     width: 100%;
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: toIndexMob(23);
     line-height: 99%;
     /* or 23px */
@@ -133,9 +133,9 @@
     background: #000;
   }
   &__text {
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(20);
     line-height: 96%;
     /* or 20px */
@@ -353,6 +353,7 @@
     }
     &__text {
       font-size: toIndex(66);
+      font-weight: 800;
     }
     &:nth-child(1) {
       top: toIndex(30);
