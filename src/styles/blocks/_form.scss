@@ -73,6 +73,8 @@
     }
   }
   &__btn {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: toIndexMob(85);
     min-width: max-content;
     border: 0;
@@ -87,11 +89,9 @@
     /* identical to box height, or 28px */
 
     text-transform: uppercase;
-
+    text-align: left;
     color: #ffffff;
     svg {
-      margin-left: toIndexMob(40);
-      display: inline-block;
       width: toIndexMob(21);
     }
   }
@@ -131,7 +131,8 @@
     &__form {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      align-items: stretch;
+      grid-template-rows: min-content;
+      //   align-items: stretch;
       gap: toIndex(105);
     }
     &__group {
@@ -147,13 +148,20 @@
     &__input-exp {
       margin-bottom: 0;
       height: auto;
-      align-self: stretch;
+      &::placeholder {
+        max-width: toIndex(230);
+      }
     }
     &__btn {
       margin-bottom: 0;
+      padding-bottom: toIndex(40);
+      border-width: 8px;
       max-width: toIndex(830);
       grid-column: span 2;
       font-size: toIndex(67);
+      svg {
+        width: toIndex(45);
+      }
     }
     &__logo {
       width: toIndex(185);
