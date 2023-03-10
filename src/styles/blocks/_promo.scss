@@ -17,12 +17,15 @@
     justify-content: flex-end;
   }
   &__top-label {
-    font-weight: 600;
+    font-weight: 700;
     font-size: toIndex(23);
     line-height: 99%;
     letter-spacing: -0.033em;
     text-transform: uppercase;
     color: #b6ff7d;
+  }
+  &__bottom {
+    padding-bottom: toIndex(90);
   }
   &__bottom-container {
     display: flex;
@@ -36,7 +39,7 @@
   }
   &__title {
     font-family: Manrope;
-    font-weight: 700;
+    font-weight: 600;
     font-size: toIndex(110);
     line-height: 1;
     letter-spacing: -0.033em;
@@ -44,21 +47,25 @@
   }
   &__title-row {
     display: block;
+    &:not(:last-child) {
+      margin-bottom: toIndex(-10);
+    }
     &:nth-child(2) {
       margin-left: toIndex(130);
     }
   }
   &__text {
     position: absolute;
-    bottom: 0;
+    bottom: toIndex(5);
     right: 0;
-    font-weight: 600;
+    font-weight: 700;
     font-size: toIndex(28);
     line-height: 99%;
     letter-spacing: -0.033em;
     color: #b6ff7d;
     span {
-      width: toIndex(40);
+      display: inline-block;
+      width: toIndex(30);
     }
   }
   &__button {
@@ -69,7 +76,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndex(28);
     letter-spacing: -0.033em;
     color: #000;

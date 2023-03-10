@@ -1,0 +1,24 @@
+.dont {
+  padding: toIndex(350) 0;
+  &__inner {
+    position: relative;
+  }
+  &__logo {
+    position: absolute;
+    top: toIndex(20);
+    left: 0;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: toIndex(133);
+    line-height: 99%;
+    letter-spacing: -0.033em;
+    color: #ffffff;
+  }
+  &__title-row {
+    display: block;
+    &:first-child {
+      text-indent: toIndex(350);
+    }
+  }
+}

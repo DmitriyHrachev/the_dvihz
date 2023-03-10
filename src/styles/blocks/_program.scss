@@ -1,0 +1,104 @@
+.program {
+  padding: toIndex(180) 0 toIndex(240);
+  &__header {
+    position: relative;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: toIndex(123);
+    line-height: 96%;
+    letter-spacing: -0.033em;
+    color: #ffffff;
+    margin-bottom: toIndex(130);
+  }
+  &__title-row {
+    display: block;
+    &:last-child {
+      color: #b6ff7d;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: toIndex(30);
+    right: 0;
+  }
+  &__list {
+    border-top: 3px solid #fff;
+    padding-top: toIndex(50);
+  }
+  &__footer {
+    padding-top: toIndex(100);
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: toIndex(42);
+    line-height: 99%;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-bottom: toIndex(25);
+    max-width: 500px;
+    width: 100%;
+    border: none;
+    border-bottom: 4px solid #fff;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.program-card {
+  border-bottom: 3px solid #fff;
+  padding-bottom: toIndex(120);
+  margin-bottom: toIndex(50);
+  display: grid;
+  align-items: center;
+  grid-template-columns: toIndex(610) 1fr 1fr 1fr;
+  &__title {
+    font-weight: 500;
+    font-size: toIndex(66);
+    line-height: 96%;
+    letter-spacing: -0.033em;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: toIndex(510);
+  }
+  &__speaker {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    p {
+      font-weight: 400;
+      font-size: toIndex(23);
+      line-height: 133%;
+      letter-spacing: -0.033em;
+      color: #ffffff;
+      b {
+        font-weight: 600;
+        display: block;
+      }
+    }
+  }
+  &__tag {
+    font-weight: 700;
+    font-size: toIndex(23);
+    line-height: 133%;
+    letter-spacing: -0.033em;
+    text-transform: uppercase;
+    color: #b6ff7d;
+    text-align: center;
+  }
+  &__date {
+    font-weight: 600;
+    font-size: toIndex(23);
+    line-height: 133%;
+    letter-spacing: -0.033em;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.33;
+    text-align: right;
+  }
+}
