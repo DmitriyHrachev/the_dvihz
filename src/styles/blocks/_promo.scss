@@ -24,6 +24,13 @@
     text-transform: uppercase;
     color: #b6ff7d;
   }
+  &__lottie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
   &__bottom {
     padding-bottom: toIndex(90);
   }
@@ -39,7 +46,7 @@
   }
   &__title {
     font-family: Manrope;
-    font-weight: 600;
+    font-weight: 800;
     font-size: toIndex(110);
     line-height: 1;
     letter-spacing: -0.033em;

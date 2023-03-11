@@ -21,6 +21,7 @@
 
 .footer {
   padding-top: toIndex(50);
+  overflow: hidden;
   &__marquee {
     font-weight: 500;
     font-size: 46px;

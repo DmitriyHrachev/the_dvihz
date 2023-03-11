@@ -3,11 +3,15 @@
   background: #ffffff;
   &__row {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
   }
   &__col {
     &:nth-child(1) {
       width: toIndex(820);
+      position: sticky;
+      top: toIndex(80);
+      left: 0;
     }
     &:nth-child(2) {
       width: toIndex(540);

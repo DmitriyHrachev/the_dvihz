@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "gsap": "^3.11.4",
+    "lottie-web": "^5.10.2",
     "reset-css": "^5.0.1"
   }
 }
