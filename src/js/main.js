@@ -1,3 +1,4 @@
+import './modules/form.js';
 import lottie from 'lottie-web';
 
 window.addEventListener('DOMContentLoaded', () => {
