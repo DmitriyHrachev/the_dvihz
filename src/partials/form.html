@@ -1,0 +1,76 @@
+<section class="form" data-section-form>
+  <div class="container">
+    <h2 class="form__title" data-title>
+      Потрапити до відбору <span class="form__title-line">у ком’юніті</span>
+    </h2>
+    <div class="form__wrap">
+      <p class="form__text">
+        Після знайомства з твоєю анкетою, вийдемо на зв‘язок, щоб все детально
+        обговорити
+      </p>
+      <form class="form__form" data-form>
+        <div class="form__group">
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Ім‘я і Прізвище"
+            minlength="4"
+            maxlength="20"
+            pattern="([А-яA-z]+\s?)+"
+            required
+          />
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="form__input"
+            placeholder="Номер телефону (Telegram)"
+            pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
+            required
+          />
+          <input
+            type="text"
+            name="inst"
+            id="inst"
+            class="form__input"
+            placeholder="Instagram"
+            pattern="(?!.*\.\.)(?!.*\.$)[^\W][\w.]{0,29}"
+            required
+          />
+          <input
+            type="text"
+            name="field"
+            id="field"
+            class="form__input"
+            placeholder="Сфера діяльності"
+            minlength="4"
+            maxlength="30"
+            required
+          />
+        </div>
+        <textarea
+          name="experience"
+          id="experience"
+          class="form__input form__input-exp"
+          placeholder="Розкажи про свій досвід у digital"
+          minlength="20"
+          maxlength="350"
+          required
+        ></textarea>
+        <button class="form__btn" type="submit">
+          Відправити дані
+          <svg
+            viewBox="0 0 16 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M16 9.5L0.25 18.5933L0.25 0.406734L16 9.5Z" fill="white" />
+          </svg>
+        </button>
+      </form>
+      <img src="@img/stat-logo.svg" alt="THE / D" class="form__logo" />
+    </div>
+  </div>
+</section>

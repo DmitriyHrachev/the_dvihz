@@ -11,7 +11,7 @@
     <ul class="people__list">
       <li class="people-card">
         <div class="people-card__circle"></div>
-        <p class="people-card__text">Таргетологи та арбітражниĸи</p>
+        <p class="people-card__text">Таргетологи та арбітражники</p>
       </li>
       <li class="people-card">
         <img src="@img/people-photo-1.webp" alt="" class="people-card__photo" />
@@ -27,11 +27,11 @@
       </li>
       <li class="people-card">
         <div class="people-card__triangle"></div>
-        <p class="people-card__text">Фаундери агенцій та ĸоманд</p>
+        <p class="people-card__text">Фаундери агенцій та команд</p>
       </li>
       <li class="people-card">
         <div class="people-card__square"></div>
-        <p class="people-card__text">Власниĸи інсташопів та е-commerce</p>
+        <p class="people-card__text">Власники інсташопів та е-commerce</p>
       </li>
       <li class="people-card">
         <img src="@img/people-photo-5.webp" alt="" class="people-card__photo" />
@@ -46,10 +46,6 @@
         <img src="@img/people-photo-8.webp" alt="" class="people-card__photo" />
       </li>
     </ul>
-    <a href="" class="people__btn people-btn">
-      <div class="people-btn__wrap">
-        <img class="people-btn__icon" src="@img/icon-arrow.svg" />
-      </div>
-    </a>
+    @@include('./btn-circle-arrow.html', {href: "#", class: "people__btn"})
   </div>
 </section>

@@ -1,6 +1,8 @@
+@use 'sass:math';
+
 .format-offline {
   padding: toIndexMob(80) 0;
-  font-family: 'Basier Square';
+  font-family: 'Manrope';
   overflow: hidden;
   color: #000;
   background-color: #b6ff7d;
@@ -9,7 +11,7 @@
   }
   &__subtitle {
     margin-bottom: toIndexMob(15);
-    font-weight: 600;
+    font-weight: 700;
     font-size: toIndexMob(16);
     line-height: 133%;
     /* or 21px */
@@ -18,7 +20,7 @@
   }
   &__title {
     max-width: toIndexMob(350);
-    font-weight: 600;
+    font-weight: 800;
     font-size: toIndexMob(62);
     line-height: 96%;
     /* or 60px */
@@ -57,13 +59,13 @@
   }
   &__title {
     max-width: toIndexMob(200);
-    font-weight: 600;
+    font-weight: 800;
     font-size: toIndexMob(28);
 
     text-transform: uppercase;
   }
   &__text {
-    max-width: toIndexMob(150);
+    max-width: toIndexMob(165);
     font-weight: 500;
     font-size: toIndexMob(14);
     line-height: 96%;
@@ -74,7 +76,7 @@
   }
   &__goal {
     max-width: toIndexMob(105);
-    font-weight: 600;
+    font-weight: 700;
     font-size: toIndexMob(14);
 
     text-transform: uppercase;
@@ -89,18 +91,20 @@
       padding-right: 0;
     }
     &__title-wrap {
-      margin-right: toIndex(-655 / 2);
+      margin-right: toIndex(math.div(-655, 2));
       margin-bottom: toIndex(65);
     }
     &__subtitle {
       position: absolute;
       font-size: toIndex(33);
+      font-weight: 700;
     }
     &__title {
       margin-left: auto;
       margin-right: auto;
       max-width: toIndex(1100);
       font-size: toIndex(133);
+      font-weight: 800;
     }
     &__list {
       padding-left: calc(50vw);
@@ -111,19 +115,21 @@
     gap: toIndex(35);
 
     &:first-child {
-      margin-left: toIndex(-655 / 2);
+      margin-left: toIndex(math.div(-655, 2));
     }
     &:not(:last-child) {
       margin-right: toIndex(-40);
     }
     &__title {
-      max-width: toIndex(415);
+      max-width: toIndex(395);
       font-size: toIndex(56);
+      font-weight: 800;
     }
     &__text {
-      max-width: toIndex(290);
+      max-width: toIndex(265);
 
       font-size: toIndex(21);
+      font-weight: 600;
     }
     &__slash {
       font-size: toIndex(21);
@@ -131,6 +137,7 @@
     &__goal {
       max-width: toIndex(200);
       font-size: toIndex(26);
+      font-weight: 700;
     }
   }
 }

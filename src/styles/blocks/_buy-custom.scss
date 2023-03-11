@@ -1,0 +1,112 @@
+.buy-custom {
+  padding: toIndex(240) 0;
+  background-color: #fff;
+  &__inner {
+    position: relative;
+  }
+  &__title {
+    font-weight: 800;
+    font-size: toIndex(133);
+    line-height: 1;
+    letter-spacing: -0.033em;
+    color: #000000;
+  }
+  &__title-row {
+    display: block;
+    &:not(:last-child) {
+      margin-bottom: toIndex(-15);
+    }
+    &:first-child {
+      padding-left: toIndex(80);
+    }
+    &:last-child {
+      padding-left: toIndex(500);
+    }
+  }
+  &__row {
+    position: relative;
+    padding-top: toIndex(230);
+    padding-left: toIndex(500);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__label {
+    position: absolute;
+    bottom: toIndex(-30);
+    left: 0;
+    width: toIndex(370);
+    height: toIndex(370);
+    border-radius: 50%;
+    background: #b6ff7d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: toIndex(46);
+    line-height: 96%;
+    text-align: center;
+    letter-spacing: -0.033em;
+    color: #000000;
+    img {
+      position: absolute;
+      top: 2.5%;
+      left: 2.5%;
+      width: 95%;
+      height: 95%;
+      animation: rotateAnimation 15s linear infinite;
+    }
+  }
+  &__button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: toIndex(33);
+    line-height: 1;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: toIndex(20);
+    display: inline-block;
+    position: relative;
+    svg {
+      margin-left: toIndex(70);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: toIndex(5) solid #000;
+    }
+  }
+  &__text {
+    font-weight: 700;
+    font-size: toIndex(28);
+    line-height: 113%;
+    letter-spacing: -0.033em;
+    text-indent: toIndex(66);
+    color: #000000;
+    max-width: toIndex(435);
+    position: absolute;
+    top: toIndex(-60);
+    right: 0;
+    svg {
+      position: absolute;
+      top: 0;
+      right: calc(100% + 60px);
+    }
+  }
+  &__logo {
+    width: toIndex(184);
+  }
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
