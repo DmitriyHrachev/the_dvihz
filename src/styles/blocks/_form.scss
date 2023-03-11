@@ -66,6 +66,12 @@
     transition: $transition;
     // opacity: 0.44;
     border-color: rgba($color: #f9f9f9, $alpha: 0.44);
+    &:-webkit-autofill {
+      background-color: transparent !important;
+      -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 1) inset !important;
+      -webkit-text-fill-color: #f9f9f9 !important;
+      color: #f9f9f9 !important;
+    }
     &:focus,
     &:not(:placeholder-shown) {
       outline: none;
