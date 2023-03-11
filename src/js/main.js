@@ -1,5 +1,10 @@
-import './modules/form.js';
+import gsap from 'gsap';
+import ScrollTrigger from './modules/ScrollTrigger.js';
+
 import lottie from 'lottie-web';
+
+import './modules/form.js';
+import './modules/offline.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   lottie.loadAnimation({
@@ -9,4 +14,5 @@ window.addEventListener('DOMContentLoaded', () => {
     autoplay: true,
     path: '../files/promo-animation.json', // the path to the animation json
   });
+  ScrollTrigger.refresh();
 });

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import gsap from 'gsap';
-import ScrollTrigger from 'Plugins/gsap/ScrollTrigger';
+import ScrollTrigger from './ScrollTrigger.js';
+
 import '../effects/titleAnimation.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +32,7 @@ function toggleLoading() {
 // ANIMATION
 const tl = gsap.timeline({
   scrollTrigger: {
+    trigger: sectionRef,
     start: 'top center',
   },
 });

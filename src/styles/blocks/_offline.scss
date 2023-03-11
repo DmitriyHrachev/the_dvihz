@@ -1,0 +1,224 @@
+.offline {
+  padding-top: toIndexMob(35);
+  padding-bottom: toIndexMob(75);
+  background-color: #b6ff7d;
+  color: #000000;
+  letter-spacing: -0.033em;
+
+  &__line {
+    margin-bottom: toIndexMob(15);
+    height: 4px;
+    background: currentColor;
+  }
+  &__ticker {
+    margin-bottom: toIndexMob(55);
+    font-weight: 600;
+    font-size: toIndexMob(42);
+    line-height: 96%;
+    /* identical to box height, or 41px */
+  }
+  &__header {
+    margin-bottom: toIndexMob(35);
+  }
+  &__event {
+    margin-bottom: toIndexMob(45);
+    margin-left: auto;
+    width: max-content;
+  }
+  &__title {
+    margin-bottom: toIndexMob(40);
+    max-width: toIndexMob(340);
+    font-weight: 800;
+    font-size: toIndexMob(66);
+    line-height: 96%;
+  }
+
+  &__list-wrap {
+    margin-left: auto;
+
+    margin-bottom: toIndexMob(45);
+    padding-left: toIndexMob(30);
+    position: relative;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: toIndexMob(90);
+    row-gap: toIndexMob(65);
+    counter-reset: offline-list;
+
+    .offline-card:nth-child(1) {
+      max-width: toIndexMob(87);
+    }
+    .offline-card:nth-child(2) {
+      max-width: toIndexMob(130);
+    }
+    .offline-card:nth-child(3) {
+      max-width: toIndexMob(110);
+      grid-column: 2;
+    }
+  }
+  &__btn {
+    width: toIndexMob(165);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform: translateY(15%);
+    fill: #fff;
+    .btn-circle-arrow__icon {
+      rotate: 180deg;
+    }
+  }
+  &__list-title {
+    max-width: toIndexMob(260);
+    font-weight: 800;
+    font-size: toIndexMob(44);
+    line-height: 96%;
+    /* or 42px */
+
+    letter-spacing: -0.033em;
+  }
+
+  &__text {
+    margin-bottom: toIndexMob(90);
+    max-width: toIndexMob(250);
+    font-weight: 700;
+    font-size: toIndexMob(36);
+    line-height: 96%;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+.offline-card {
+  &::before {
+    margin-bottom: toIndexMob(20);
+    content: '/ 00' counter(offline-list);
+    counter-increment: offline-list;
+    display: block;
+    font-weight: 700;
+    font-size: toIndexMob(21);
+    line-height: 96%;
+    /* or 20px */
+
+    letter-spacing: -0.033em;
+  }
+  &__text {
+    font-size: toIndexMob(15);
+    line-height: 113%;
+    /* or 17px */
+
+    letter-spacing: -0.033em;
+  }
+}
+.offline-event {
+  display: flex;
+  justify-content: space-between;
+  gap: toIndexMob(50);
+  line-height: 113%;
+  text-align: right;
+  &__desc {
+    font-weight: 800;
+    font-size: toIndexMob(21);
+    text-transform: uppercase;
+  }
+  &__term {
+    margin-bottom: toIndexMob(10);
+    font-weight: 700;
+    font-size: toIndexMob(14);
+
+    opacity: 0.33;
+  }
+}
+@media (min-width: $breakpoint-md) {
+  .offline {
+    &__text {
+      max-width: toIndexMob(400);
+    }
+  }
+}
+@media (min-width: $breakpoint-xl) {
+  .offline {
+    padding-top: toIndex(100);
+    padding-bottom: toIndex(245);
+    &__ticker {
+      margin-bottom: toIndex(190);
+      font-weight: 700;
+      font-size: toIndex(133);
+    }
+    &__header {
+      margin-bottom: toIndex(190);
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+    &__event {
+      margin: 0;
+    }
+    &__title {
+      max-width: toIndex(970);
+      font-size: toIndex(186);
+    }
+    &__underscore {
+      display: none;
+    }
+    &__text {
+      margin-bottom: toIndex(150);
+      max-width: toIndex(920);
+      font-weight: 800;
+      font-size: toIndex(66);
+    }
+    &__list-wrap {
+      margin-bottom: toIndex(-50);
+    }
+    &__list-title {
+      max-width: toIndex(1150);
+      font-size: toIndex(133);
+      span {
+        display: block;
+      }
+    }
+    &__list {
+      column-gap: toIndex(175);
+      row-gap: toIndex(135);
+      .offline-card:nth-child(1) {
+        max-width: toIndex(210);
+      }
+      .offline-card:nth-child(2) {
+        max-width: toIndex(305);
+      }
+      .offline-card:nth-child(3) {
+        max-width: toIndex(240);
+      }
+    }
+    &__btn {
+      width: toIndex(315);
+    }
+  }
+  .offline-event {
+    flex-direction: column;
+    gap: toIndex(75);
+    justify-content: flex-start;
+    &__term {
+      margin-bottom: toIndex(25);
+      font-size: toIndex(23);
+    }
+    &__desc {
+      font-size: toIndex(42);
+    }
+  }
+  .offline-card {
+    width: 100%;
+    &::before {
+      margin-bottom: toIndex(45);
+      font-size: toIndex(46);
+    }
+    &__text {
+      font-size: toIndex(33);
+      letter-spacing: -0.033em;
+    }
+  }
+}
