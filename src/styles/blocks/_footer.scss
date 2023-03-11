@@ -83,7 +83,7 @@
   }
   &__info {
     font-weight: 400;
-    font-size: 21px;
+    font-size: toIndex(21);
     line-height: 118%;
     color: rgba(255, 255, 255, 0.44);
     li {
