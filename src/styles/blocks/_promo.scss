@@ -1,10 +1,12 @@
 .promo {
   &__top {
     position: relative;
-    margin-bottom: toIndex(120);
+    margin-bottom: toIndexMob(55);
     img {
       display: block;
       width: 100%;
+      min-height: 180px;
+      object-fit: cover;
     }
   }
   &__top-container {
@@ -99,5 +101,13 @@
     color: rgba(255, 255, 255, 0.33);
     transform: rotate(-90deg);
     transform-origin: top;
+  }
+}
+
+@media (min-width: 1024px) {
+  .promo {
+    &__top {
+      margin-bottom: toIndex(120);
+    }
   }
 }
