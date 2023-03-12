@@ -31,7 +31,7 @@
     padding-right: 0;
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    width: max-content;
   }
 }
 .format-offline-card {
@@ -82,16 +82,37 @@
     text-transform: uppercase;
   }
 }
-
+@media (min-width: $breakpoint-md) {
+  $card-width: 350;
+  .format-offline {
+    .container {
+      padding-right: 0;
+    }
+    &__title-wrap {
+      margin-right: toIndexMob(math.div(-$card-width, 2));
+    }
+    &__title {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__list {
+      padding-left: calc(50vw);
+      margin-left: toIndexMob(math.div(-$card-width, 2));
+    }
+  }
+  .format-offline-card {
+    width: toIndexMob($card-width);
+  }
+}
 @media (min-width: $breakpoint-xl) {
+  $card-width: 655;
   .format-offline {
     padding: toIndex(225) 0;
     .container {
       position: relative;
-      padding-right: 0;
     }
     &__title-wrap {
-      margin-right: toIndex(math.div(-655, 2));
+      margin-right: toIndex(math.div(-$card-width, 2));
       margin-bottom: toIndex(65);
     }
     &__subtitle {
@@ -100,23 +121,17 @@
       font-weight: 700;
     }
     &__title {
-      margin-left: auto;
-      margin-right: auto;
       max-width: toIndex(1100);
       font-size: toIndex(133);
       font-weight: 800;
     }
     &__list {
-      padding-left: calc(50vw);
+      margin-left: toIndex(math.div(-$card-width, 2));
     }
   }
   .format-offline-card {
-    width: toIndex(655);
+    width: toIndex($card-width);
     gap: toIndex(35);
-
-    &:first-child {
-      margin-left: toIndex(math.div(-655, 2));
-    }
     &:not(:last-child) {
       margin-right: toIndex(-40);
     }

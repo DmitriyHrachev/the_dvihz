@@ -3,9 +3,9 @@ import ScrollTrigger from './modules/ScrollTrigger.js';
 
 import lottie from 'lottie-web';
 
-import './modules/form.js';
 import './modules/offline.js';
-
+import './modules/form.js';
+import './modules/format.js';
 window.addEventListener('DOMContentLoaded', () => {
   lottie.loadAnimation({
     container: document.getElementById('lottie'), // the dom element that will contain the animation

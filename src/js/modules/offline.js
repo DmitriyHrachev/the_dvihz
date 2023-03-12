@@ -1,6 +1,7 @@
-import '../effects/charsOpacity.js';
 import gsap from 'gsap';
 import ScrollTrigger from './ScrollTrigger.js';
+import '../effects/charsOpacity.js';
+import '../effects/titleAnimation.js';
 
 const sectionRef = document.querySelector('[data-section-offline]');
 const selector = gsap.utils.selector(sectionRef);

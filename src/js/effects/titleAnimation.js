@@ -1,5 +1,8 @@
 import gsap from 'gsap';
 import SplitText from 'Plugins/gsap/SplitText';
+gsap.config({
+  force3D: true,
+});
 gsap.registerEffect({
   name: 'titleAnim',
   effect: (target, config) => {
