@@ -1,5 +1,5 @@
 .payment {
-  padding: toIndexMob(40) 0 toIndexMob(130);
+  padding: toIndexMob(40) 0 toIndexMob(100);
   background-color: #b6ff7d;
   &__inner {
     position: relative;
@@ -84,7 +84,7 @@
     letter-spacing: -0.033em;
     text-indent: toIndex(66);
     color: #000000;
-    max-width: toIndexMob(130);
+    max-width: toIndexMob(100);
     margin-left: auto;
     position: relative;
     svg {

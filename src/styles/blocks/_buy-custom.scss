@@ -1,5 +1,5 @@
 .buy-custom {
-  padding: toIndexMob(130) 0;
+  padding: toIndexMob(100) 0;
   // background-color: #fff;
   &__inner {
     position: relative;
@@ -9,7 +9,6 @@
     font-size: toIndexMob(36);
     line-height: 1;
     letter-spacing: -0.033em;
-    color: #000000;
     margin-bottom: toIndexMob(110);
   }
   &__title-row {
@@ -42,7 +41,7 @@
     line-height: 96%;
     text-align: center;
     letter-spacing: -0.033em;
-    color: #000000;
+    // color: #000000;
     img {
       position: absolute;
       top: 2.5%;
@@ -60,7 +59,7 @@
     font-size: toIndexMob(20);
     line-height: 1;
     text-transform: uppercase;
-    color: #000000;
+    // color: #000000;
     padding-bottom: toIndex(20);
     display: inline-block;
     position: relative;
@@ -74,7 +73,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      border-bottom: toIndex(5) solid #000;
+      border-bottom: toIndex(5) solid currentColor;
     }
   }
   &__text {
@@ -83,8 +82,8 @@
     line-height: 113%;
     letter-spacing: -0.033em;
     text-indent: toIndex(66);
-    color: #000000;
-    max-width: toIndexMob(130);
+    // color: #000000;
+    max-width: toIndexMob(100);
     margin-left: auto;
     position: relative;
     svg {

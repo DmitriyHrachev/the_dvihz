@@ -1,5 +1,5 @@
 .program {
-  padding: toIndex(180) 0 toIndex(240);
+  padding: toIndexMob(100) 0 toIndexMob(100);
   &__header {
     position: relative;
   }
@@ -9,7 +9,7 @@
     line-height: 96%;
     letter-spacing: -0.033em;
     color: #ffffff;
-    margin-bottom: toIndex(130);
+    margin-bottom: toIndexMob(70);
   }
   &__title-row {
     display: block;
@@ -21,13 +21,14 @@
     position: absolute;
     top: toIndex(30);
     right: 0;
+    display: none;
   }
   &__list {
     border-top: 3px solid #fff;
-    padding-top: toIndex(50);
+    padding-top: toIndexMob(30);
   }
   &__footer {
-    padding-top: toIndex(100);
+    padding-top: toIndexMob(60);
     display: flex;
     justify-content: center;
   }
@@ -36,47 +37,54 @@
     align-items: center;
     justify-content: space-between;
     font-weight: 700;
-    font-size: toIndex(42);
+    font-size: toIndexMob(18);
     line-height: 99%;
     text-transform: uppercase;
     color: #ffffff;
-    padding-bottom: toIndex(25);
-    max-width: 500px;
+    padding-bottom: toIndexMob(10);
+    max-width: toIndexMob(220);
     width: 100%;
     border: none;
     border-bottom: 4px solid #fff;
     background-color: transparent;
     cursor: pointer;
+    img {
+      width: toIndexMob(12);
+      height: auto;
+    }
   }
 }
 
 .program-card {
-  border-bottom: 3px solid #fff;
-  padding-bottom: toIndex(120);
-  margin-bottom: toIndex(50);
+  border-bottom: 2px solid #fff;
+  padding-bottom: toIndexMob(16);
+  margin-bottom: toIndexMob(35);
   display: grid;
   align-items: center;
-  grid-template-columns: toIndex(610) 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   &__title {
     font-weight: 500;
-    font-size: toIndex(66);
+    font-size: toIndexMob(36);
     line-height: 96%;
     letter-spacing: -0.033em;
     text-transform: uppercase;
     color: #ffffff;
-    max-width: toIndex(510);
+    max-width: toIndexMob(290);
+    margin-bottom: toIndexMob(45);
   }
   &__speaker {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    margin-bottom: toIndexMob(35);
     p {
       font-weight: 400;
-      font-size: toIndex(23);
+      font-size: toIndexMob(12);
       line-height: 133%;
       letter-spacing: -0.033em;
       color: #ffffff;
       b {
+        font-size: toIndexMob(16);
         font-weight: 600;
         display: block;
       }
@@ -84,21 +92,91 @@
   }
   &__tag {
     font-weight: 700;
-    font-size: toIndex(23);
+    font-size: toIndexMob(16);
     line-height: 133%;
     letter-spacing: -0.033em;
     text-transform: uppercase;
     color: #b6ff7d;
-    text-align: center;
   }
   &__date {
     font-weight: 600;
-    font-size: toIndex(23);
+    font-size: toIndexMob(16);
     line-height: 133%;
     letter-spacing: -0.033em;
     text-transform: uppercase;
     color: #ffffff;
     opacity: 0.33;
     text-align: right;
+  }
+}
+
+@media (max-width: 1199px) {
+  .program-card {
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+    &__speaker {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .program {
+    padding: toIndex(180) 0 toIndex(240);
+    &__icon {
+      display: block;
+    }
+    &__list {
+      padding-top: toIndex(50);
+    }
+    &__title {
+      margin-bottom: toIndex(130);
+    }
+    &__title-row {
+      display: block;
+    }
+
+    &__footer {
+      padding-top: toIndex(100);
+    }
+    &__button {
+      font-size: toIndex(42);
+      padding-bottom: toIndex(25);
+      max-width: 500px;
+      img {
+        width: toIndex(28);
+      }
+    }
+  }
+  .program-card {
+    border-bottom: 3px solid #fff;
+    padding-bottom: toIndex(120);
+    margin-bottom: toIndex(50);
+    grid-template-columns: toIndex(610) 1fr 1fr 1fr;
+    &__title {
+      font-size: toIndex(66);
+      margin-bottom: 0;
+      max-width: toIndex(510);
+    }
+    &__speaker {
+      margin-bottom: 0;
+      gap: 20px;
+      p {
+        font-size: toIndex(23);
+        b {
+          font-size: toIndex(23);
+        }
+      }
+    }
+    &__tag {
+      font-size: toIndex(23);
+      text-align: center;
+    }
+    &__date {
+      font-size: toIndex(23);
+    }
   }
 }
