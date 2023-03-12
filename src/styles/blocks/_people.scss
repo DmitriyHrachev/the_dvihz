@@ -78,6 +78,7 @@
     position: relative;
   }
   &__btn {
+    width: toIndexMob(175);
     position: absolute;
     bottom: 0;
     right: 15%;
