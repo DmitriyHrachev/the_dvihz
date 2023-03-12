@@ -33,9 +33,15 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .header {
-    padding: toIndex(55) 0 toIndex(60);
+    padding: toIndexMob(30) 0;
+  }
+}
+
+@media (min-width: 1200) {
+  .header {
+    padding: toIndex(50) 0;
     &__logo {
       width: toIndex(108);
     }

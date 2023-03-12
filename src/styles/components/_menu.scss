@@ -129,10 +129,18 @@
   }
 }
 
+@media (min-width: 768px) {
+  .menu {
+    &__header {
+      padding: toIndexMob(30) 0;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .menu {
     &__header {
-      padding: toIndex(55) 0 toIndex(110);
+      padding: toIndex(50) 0 toIndex(110);
     }
     &__logo {
       width: toIndex(106);
