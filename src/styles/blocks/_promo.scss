@@ -1,4 +1,5 @@
 .promo {
+  margin-bottom: toIndexMob(90);
   &__top {
     position: relative;
     margin-bottom: toIndexMob(55);
@@ -33,23 +34,17 @@
     width: 100%;
     height: 100%;
   }
-  &__bottom {
-    padding-bottom: toIndex(90);
-  }
   &__bottom-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
   }
   &__bottom-left-group {
-    position: relative;
     margin-right: auto;
+    margin-bottom: toIndexMob(35);
   }
   &__title {
     font-family: Manrope;
     font-weight: 800;
-    font-size: toIndex(110);
+    font-size: toIndexMob(48);
     line-height: 1;
     letter-spacing: -0.033em;
     color: #ffffff;
@@ -65,10 +60,10 @@
   }
   &__text {
     position: absolute;
-    bottom: toIndex(5);
-    right: 0;
+    bottom: toIndexMob(160);
+    left: 25px;
     font-weight: 700;
-    font-size: toIndex(28);
+    font-size: toIndexMob(13);
     line-height: 99%;
     letter-spacing: -0.033em;
     color: #b6ff7d;
@@ -78,23 +73,24 @@
     }
   }
   &__button {
-    width: toIndex(360);
-    height: toIndex(360);
+    width: toIndexMob(200);
+    height: toIndexMob(200);
     background: #b6ff7d;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: toIndex(28);
+    font-size: toIndexMod(16);
     letter-spacing: -0.033em;
     color: #000;
-    margin-right: toIndex(180);
+    margin-left: auto;
+    flex-shrink: 0;
   }
   &__scroll-label {
     position: absolute;
-    bottom: 0;
-    right: toIndex(100);
+    bottom: toIndexMob(40);
+    left: 0;
     font-size: 20px;
     line-height: 24px;
     letter-spacing: -0.033em;
@@ -104,10 +100,65 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .promo {
+    margin-bottom: toIndex(190);
     &__top {
       margin-bottom: toIndex(120);
+    }
+    &__bottom-container {
+      position: relative;
+    }
+    &__bottom-left-group {
+      position: relative;
+    }
+    &__title {
+      font-size: toIndex(110);
+    }
+    &__text {
+      left: auto;
+      right: 0;
+      bottom: toIndex(5);
+      font-size: toIndex(28);
+    }
+    &__button {
+      width: toIndex(360);
+      height: toIndex(360);
+      font-size: toIndex(28);
+      margin-right: toIndex(30);
+    }
+    &__scroll-label {
+      left: auto;
+      right: 25px;
+      bottom: 0;
+    }
+    &__bottom-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__bottom-left-group {
+      margin-bottom: 0;
+      position: relative;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .promo {
+    &__scroll-label {
+      right: 40px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .promo {
+    &__button {
+      margin-right: toIndex(180);
+    }
+    &__scroll-label {
+      right: toIndex(100);
     }
   }
 }

@@ -1,25 +1,27 @@
 .video {
-  padding-top: toIndex(240);
-  padding-bottom: toIndex(340);
+  padding-top: toIndexMob(200);
+  padding-bottom: 0;
   .container {
     position: relative;
   }
   &__text {
-    max-width: toIndex(320);
+    max-width: toIndexMob(120);
     font-weight: 700;
-    font-size: toIndex(21);
+    font-size: toIndexMob(13);
     line-height: 133%;
     letter-spacing: 0.033em;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: toIndex(60);
+    margin-bottom: toIndexMob(40);
+    position: relative;
+    z-index: 1;
     b {
       color: #b6ff7d;
     }
   }
   &__title {
     font-weight: 800;
-    font-size: toIndex(173);
+    font-size: toIndexMob(52);
     line-height: 100%;
     letter-spacing: -0.033em;
     color: #ffffff;
@@ -38,10 +40,10 @@
   &__btn {
     position: absolute;
     z-index: 2;
-    left: toIndex(500);
-    top: toIndex(-100);
-    width: toIndex(500);
-    height: toIndex(500);
+    left: toIndexMob(135);
+    bottom: toIndexMob(20);
+    width: toIndexMob(174);
+    height: toIndexMob(174);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -51,8 +53,43 @@
   }
   &__img {
     position: absolute;
-    top: toIndex(-240);
-    left: 40%;
-    width: toIndex(1170);
+    bottom: toIndexMob(70);
+    left: toIndexMob(60);
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) {
+  .video {
+    padding-top: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .video {
+    padding-top: toIndex(240);
+    padding-bottom: toIndex(340);
+    &__text {
+      max-width: toIndex(320);
+      font-size: toIndex(21);
+      margin-bottom: toIndex(60);
+    }
+    &__title {
+      font-size: toIndex(173);
+    }
+    &__btn {
+      left: toIndex(500);
+      top: toIndex(-100);
+      width: toIndex(500);
+      height: toIndex(500);
+      border-radius: 50%;
+      bottom: auto;
+    }
+    &__img {
+      top: toIndex(-240);
+      left: 40%;
+      width: toIndex(1170);
+      bottom: auto;
+    }
   }
 }
