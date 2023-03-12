@@ -1,0 +1,51 @@
+@keyframes ticker-anim {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes ticker-anim2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+.ticker {
+  $def-duration: 30s;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+
+  & > &__original,
+  & > &__clone {
+    // display: inline-flex;
+    width: min-content;
+    flex-grow: 0;
+    flex-shrink: 0;
+    animation-fill-mode: none;
+    will-change: transform;
+    animation-duration: var(--ticker-duration, $def-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  & > &__original {
+    animation-name: ticker-anim;
+    animation-delay: calc(var(--ticker-duration, $def-duration) * -1);
+  }
+  & > &__clone {
+    animation-name: ticker-anim2;
+    animation-delay: calc(var(--ticker-duration, $def-duration) / 2 * -1);
+  }
+  &--reverse-direction {
+    & > &__original {
+      animation-direction: reverse;
+    }
+    & > &__clone {
+      animation-direction: reverse;
+    }
+  }
+}
