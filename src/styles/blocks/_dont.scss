@@ -1,5 +1,5 @@
 .dont {
-  padding: toIndex(350) 0;
+  padding: toIndexMob(110) 0;
   &__inner {
     position: relative;
   }
@@ -7,10 +7,11 @@
     position: absolute;
     top: toIndex(20);
     left: 0;
+    width: toIndexMob(41);
   }
   &__title {
     font-weight: 800;
-    font-size: toIndex(133);
+    font-size: toIndexMob(36);
     line-height: 99%;
     letter-spacing: -0.033em;
     color: #ffffff;
@@ -18,7 +19,37 @@
   &__title-row {
     display: block;
     &:first-child {
-      text-indent: toIndex(350);
+      text-indent: toIndexMob(80);
+    }
+  }
+}
+
+@media (min-width: 767px) {
+  .dont {
+    &__title {
+      font-size: toIndex(120);
+    }
+    &__title-row {
+      &:first-child {
+        text-indent: toIndex(300);
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .dont {
+    padding: toIndex(350) 0;
+    &__logo {
+      width: toIndex(108);
+    }
+    &__title {
+      font-size: toIndex(133);
+    }
+    &__title-row {
+      &:first-child {
+        text-indent: toIndex(350);
+      }
     }
   }
 }

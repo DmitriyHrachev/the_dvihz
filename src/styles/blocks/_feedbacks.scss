@@ -1,5 +1,5 @@
 .feedbacks {
-  padding: toIndexMob(80) 0;
+  padding: toIndexMob(80) 0 toIndexMob(110);
 
   &__wrap {
     height: toIndexMob(900);
@@ -46,9 +46,12 @@
     top: 0;
     left: 0;
     background: #b6ff7d;
-    opacity: 0.9;
     height: 100%;
     width: 100%;
+    transition: 0.3s ease-in;
+    opacity: 0;
+    transform: scale(0);
+    border-radius: 50%;
   }
   &__icon {
     width: 15.625%;
@@ -56,6 +59,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s ease-in;
   }
   &__photo {
     display: block;
@@ -121,6 +126,18 @@
     top: toIndexMob(750);
     right: toIndexMob(75);
     width: toIndexMob(120);
+  }
+  &:hover {
+    .feedback {
+      &__overlay {
+        opacity: 0.9;
+        transform: scale(1);
+      }
+      &__icon {
+        transition-delay: 0.1s;
+        opacity: 1;
+      }
+    }
   }
 }
 @media (min-width: 576px) {

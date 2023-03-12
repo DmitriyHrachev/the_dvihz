@@ -1,49 +1,41 @@
 .buy {
-  padding: toIndex(200) 0;
+  padding: toIndexMob(130) 0 toIndexMob(130);
   background-color: #fff;
   &__inner {
     position: relative;
   }
   &__title {
     font-weight: 800;
-    font-size: toIndex(133);
+    font-size: toIndexMob(36);
     line-height: 1;
     letter-spacing: -0.033em;
     color: #000000;
-    margin-bottom: toIndex(70);
+    margin-bottom: toIndexMob(110);
   }
   &__title-row {
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: toIndex(-15);
-    }
+    display: inline-flex;
     &:first-child {
-      padding-left: toIndex(80);
-    }
-    &:last-child {
-      padding-left: toIndex(500);
+      text-indent: toIndexMob(60);
     }
   }
   &__row {
-    position: relative;
-    padding-left: toIndex(500);
-    display: inline-block;
-    margin-bottom: toIndex(120);
+    display: flex;
+    justify-content: flex-end;
+    padding-top: toIndexMob(55);
   }
   &__label {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: toIndexMob(140);
     left: 0;
-    width: toIndex(370);
-    height: toIndex(370);
+    width: toIndexMob(165);
+    height: toIndexMob(165);
     border-radius: 50%;
     background: #b6ff7d;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: toIndex(46);
+    font-size: toIndexMob(21);
     line-height: 96%;
     text-align: center;
     letter-spacing: -0.033em;
@@ -62,7 +54,7 @@
     background-color: transparent;
     cursor: pointer;
     font-weight: 600;
-    font-size: toIndex(33);
+    font-size: toIndexMob(20);
     line-height: 1;
     text-transform: uppercase;
     color: #000000;
@@ -70,7 +62,8 @@
     display: inline-block;
     position: relative;
     svg {
-      margin-left: toIndex(70);
+      margin-left: toIndexMob(40);
+      width: toIndexMob(20);
     }
     &::after {
       content: '';
@@ -83,27 +76,27 @@
   }
   &__text {
     font-weight: 700;
-    font-size: toIndex(28);
+    font-size: toIndexMob(16);
     line-height: 113%;
     letter-spacing: -0.033em;
     text-indent: toIndex(66);
     color: #000000;
-    max-width: toIndex(435);
-    position: absolute;
-    top: toIndex(240);
-    right: 0;
+    max-width: toIndexMob(130);
+    margin-left: auto;
+    position: relative;
     svg {
+      width: toIndexMob(20);
+      height: auto;
       position: absolute;
-      top: 0;
-      right: calc(100% + 60px);
+      top: toIndexMob(-50);
+      left: 0;
     }
   }
   &__footer {
-    display: flex;
-    justify-content: flex-end;
-    img {
-      width: toIndex(184);
-    }
+    display: none;
+  }
+  &__logo {
+    width: toIndex(184);
   }
 }
 
@@ -113,5 +106,66 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .buy {
+    padding: toIndex(240) 0;
+    &__title {
+      font-size: toIndex(133);
+      margin-bottom: 0;
+    }
+    &__title-row {
+      display: block;
+      &:first-child {
+        padding-left: toIndex(80);
+        text-indent: 0;
+      }
+      &:last-child {
+        padding-left: toIndex(500);
+      }
+    }
+    &__text {
+      position: absolute;
+      top: toIndex(240);
+      right: 0;
+      font-size: toIndex(28);
+      max-width: toIndex(435);
+
+      svg {
+        top: 0;
+        right: calc(100% + 60px);
+        left: auto;
+        width: toIndex(33);
+      }
+    }
+    &__footer {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__row {
+      position: relative;
+      justify-content: space-between;
+      margin-top: toIndex(80);
+      padding-top: 0;
+      padding-left: toIndex(500);
+      margin-bottom: toIndex(120);
+    }
+    &__label {
+      width: toIndex(370);
+      height: toIndex(370);
+      font-size: toIndex(46);
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &__button {
+      font-size: toIndex(33);
+      svg {
+        margin-left: toIndex(70);
+        width: toIndex(20);
+      }
+    }
   }
 }
