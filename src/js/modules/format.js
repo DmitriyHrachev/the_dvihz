@@ -38,7 +38,6 @@ titleTl.titleAnim(selector('[data-title]')[0]);
         scrub: 0.1,
       },
       ease: 'none',
-      invalidateOnRefresh: true,
     });
     cardsRef.forEach(cardRef => {
       gsap.to(cardRef, {
