@@ -1,0 +1,123 @@
+.thanks {
+  min-height: 100vh;
+  height: 100%;
+  background-color: #b6ff7d;
+  color: #000;
+  .container {
+    position: relative;
+  }
+  &__header {
+    padding: toIndexMob(50) 0;
+  }
+  &__logo {
+    width: toIndexMob(106);
+  }
+  &__title {
+    font-weight: 800;
+    font-size: toIndexMob(36);
+    line-height: 96%;
+    letter-spacing: -0.033em;
+    color: #000000;
+    margin-bottom: toIndexMob(20);
+  }
+  &__title-row {
+    display: block;
+    &:nth-child(1) {
+      padding-left: toIndexMob(25);
+    }
+    &:nth-child(3) {
+      padding-left: toIndexMob(25);
+    }
+  }
+  &__subtitle {
+    font-size: toIndexMob(18);
+    line-height: 123%;
+    letter-spacing: -0.033em;
+    color: #000000;
+    max-width: toIndexMob(240);
+    margin-bottom: toIndexMob(45);
+    text-indent: toIndexMob(25);
+    font-weight: 600;
+    b {
+      font-weight: 800;
+    }
+  }
+  &__link {
+    width: toIndexMob(185);
+    height: toIndexMob(185);
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: toIndexMob(16);
+    line-height: 96%;
+    text-align: center;
+    letter-spacing: -0.033em;
+    color: #b6ff7d;
+    margin-left: auto;
+  }
+  &__text {
+    position: absolute;
+    bottom: toIndexMob(90);
+    left: 25px;
+    font-weight: 800;
+    font-size: toIndexMob(16);
+    line-height: 113%;
+    letter-spacing: -0.033em;
+    text-indent: 23px;
+    color: #000000;
+    max-width: toIndexMob(140);
+    text-indent: toIndexMob(25);
+  }
+  &__icon {
+    position: absolute;
+    bottom: toIndexMob(210);
+    right: 40px;
+    width: toIndexMob(32);
+    height: auto;
+  }
+  &__line {
+    transform: rotateY(180deg);
+    width: 100%;
+    margin-left: 25px;
+    margin-top: toIndexMob(40);
+  }
+}
+
+@media (min-width: 768px) {
+  .thanks {
+    &__header {
+      padding: toIndexMob(30) 0;
+    }
+    &__text {
+      left: 40px;
+    }
+    &__line {
+      margin-left: 40px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .thanks {
+    &__text {
+      left: toIndex(60);
+    }
+    &__line {
+      margin-left: toIndex(60);
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .thanks {
+    &__header {
+      padding: toIndex(50) 0 toIndex(110);
+    }
+    &__logo {
+      width: toIndex(106);
+    }
+  }
+}
