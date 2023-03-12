@@ -38,7 +38,7 @@ const titleTl = gsap.timeline({
         color: '#fff',
         '--backgroundColor': '#000',
       }),
-    markers: true,
+    // markers: true,
   },
 });
 titleTl.titleAnim(selector('[data-title]'));

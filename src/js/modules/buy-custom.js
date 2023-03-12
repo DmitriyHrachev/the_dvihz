@@ -26,5 +26,5 @@ ScrollTrigger.create({
   onEnter: () => setBgColor(),
   onLeaveBack: () => restoreBgColor(),
   //   onLeave: () => restoreBgColor(),
-  markers: true,
+  // markers: true,
 });

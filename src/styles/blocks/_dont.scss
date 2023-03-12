@@ -18,6 +18,7 @@
   }
   &__title-row {
     display: block;
+    overflow-y: hidden;
     &:first-child {
       text-indent: toIndexMob(80);
     }
