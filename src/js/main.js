@@ -4,6 +4,7 @@ import ScrollTrigger from './modules/ScrollTrigger.js';
 import lottie from 'lottie-web';
 
 import './modules/connect.js';
+import './modules/buy-custom.js';
 import './modules/offline.js';
 import './modules/form.js';
 import './modules/format.js';

@@ -1,6 +1,6 @@
 .feedbacks {
   padding: toIndexMob(80) 0 toIndexMob(110);
-
+  color: currentColor;
   &__wrap {
     height: toIndexMob(900);
 
@@ -19,7 +19,7 @@
 
     /* #ffff */
 
-    color: #ffffff;
+    // color: #ffffff;
   }
 }
 
@@ -80,7 +80,7 @@
 
     /* #ffff */
 
-    color: #ffffff;
+    // color: #ffffff;
   }
   &:nth-child(1) {
     top: toIndexMob(-30);
