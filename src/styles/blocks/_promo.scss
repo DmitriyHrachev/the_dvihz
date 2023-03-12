@@ -37,14 +37,12 @@
     padding-bottom: toIndex(90);
   }
   &__bottom-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: relative;
   }
   &__bottom-left-group {
     position: relative;
     margin-right: auto;
+    margin-bottom: toIndexMob(55);
   }
   &__title {
     font-family: Manrope;
@@ -108,6 +106,11 @@
   .promo {
     &__top {
       margin-bottom: toIndex(120);
+    }
+    &__bottom-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }
