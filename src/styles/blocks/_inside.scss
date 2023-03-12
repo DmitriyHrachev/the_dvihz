@@ -2,12 +2,12 @@
   padding-top: toIndex(360);
   &__header {
     position: relative;
-    padding-left: toIndex(500);
-    margin-bottom: toIndex(140);
+    padding-left: toIndexMob(60);
+    margin-bottom: toIndexMob(95);
   }
   &__title {
     font-weight: 800;
-    font-size: toIndex(133);
+    font-size: toIndexMob(36);
     line-height: 113%;
     letter-spacing: -0.033em;
     color: #ffffff;
@@ -19,69 +19,52 @@
     position: absolute;
     top: toIndex(30);
     left: 0;
+    width: toIndexMob(32);
   }
   &__list {
     display: grid;
-    gap: toIndex(45);
+    gap: toIndexMob(80);
   }
   &__list-item {
     &:nth-child(1) {
       .inside-card {
         &__title {
-          max-width: toIndex(450);
-        }
-        &__text {
-          max-width: toIndex(500);
+          max-width: toIndexMob(200);
         }
       }
     }
     &:nth-child(2) {
       .inside-card {
         &__title {
-          max-width: toIndex(600);
-        }
-        &__text {
-          max-width: toIndex(320);
+          max-width: toIndexMob(225);
         }
       }
     }
     &:nth-child(3) {
       .inside-card {
         &__title {
-          max-width: toIndex(510);
-        }
-        &__text {
-          max-width: toIndex(340);
+          max-width: toIndexMob(200);
         }
       }
     }
     &:nth-child(4) {
       .inside-card {
         &__title {
-          max-width: toIndex(490);
-        }
-        &__text {
-          max-width: toIndex(340);
+          max-width: toIndexMob(225);
         }
       }
     }
     &:nth-child(5) {
       .inside-card {
         &__title {
-          max-width: toIndex(440);
-        }
-        &__text {
-          max-width: toIndex(470);
+          max-width: toIndexMob(200);
         }
       }
     }
     &:nth-child(6) {
       .inside-card {
         &__title {
-          max-width: toIndex(460);
-        }
-        &__text {
-          max-width: toIndex(360);
+          max-width: toIndexMob(225);
         }
       }
     }
@@ -90,46 +73,46 @@
 
 .inside-card {
   display: grid;
-  gap: toIndex(20);
-  grid-template-columns: calc(55% - 10px) calc(45% - 10px);
   position: relative;
+  padding-top: toIndexMob(120);
+  background: #242424;
   &__left {
     background: #242424;
-    padding: toIndex(130) 0 toIndex(130) toIndex(150);
+    padding: 0 toIndexMob(30) toIndexMob(30) toIndexMob(60);
     position: relative;
   }
   &__right {
     display: flex;
     align-items: center;
     background: #242424;
-    position: relative;
-    padding: 0 toIndex(80) 0 toIndex(200);
+
+    padding: 0 toIndexMob(30) toIndexMob(30) toIndexMob(60);
   }
   &__title {
-    font-weight: 800;
-    font-size: toIndex(66);
+    font-weight: 600;
+    font-size: toIndexMob(28);
     line-height: 96%;
     letter-spacing: -0.033em;
     color: #ffffff;
   }
   &__label {
     position: absolute;
-    top: 50%;
-    transform-origin: center center;
-    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-    left: toIndex(60);
+    left: toIndexMob(20);
+    top: 0;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100%);
     font-weight: 500;
-    font-size: toIndex(23);
+    font-size: toIndexMob(16);
     line-height: 96%;
     color: #b6ff7d;
   }
   &__icon {
     position: absolute;
-    top: 50%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    width: toIndex(260);
-    height: toIndex(260);
+    top: toIndexMob(-45);
+    left: 50%;
+    transform: translateX(-50%);
+    width: toIndexMob(130);
+    height: toIndexMob(130);
     border-radius: 50%;
     background: #b6ff7d;
     display: flex;
@@ -143,179 +126,138 @@
   }
   &__number {
     position: absolute;
-    top: toIndex(80);
-    right: toIndex(80);
+    top: toIndexMob(20);
+    right: toIndexMob(20);
     font-weight: 500;
-    font-size: toIndex(26);
+    font-size: toIndexMob(16);
     line-height: 123%;
     color: #ffffff;
     opacity: 0.2;
   }
   &__text {
     font-weight: 400;
-    font-size: toIndex(33);
+    font-size: toIndexMob(16);
     line-height: 123%;
     color: #ffffff;
   }
 }
 
-// .inside {
-//   padding-top: toIndex(360);
-//   &__header {
-//     position: relative;
-//     padding-left: toIndex(500);
-//     margin-bottom: toIndex(140);
-//   }
-//   &__title {
-//     font-weight: 800;
-//     font-size: toIndex(133);
-//     line-height: 113%;
-//     letter-spacing: -0.033em;
-//     color: #ffffff;
-//   }
-//   &__title-row {
-//     display: block;
-//   }
-//   &__icon {
-//     position: absolute;
-//     top: toIndex(30);
-//     left: 0;
-//   }
-//   &__list {
-//     display: grid;
-//     gap: toIndex(45);
-//   }
-//   &__list-item {
-//     &:nth-child(1) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(450);
-//         }
-//         &__text {
-//           max-width: toIndex(500);
-//         }
-//       }
-//     }
-//     &:nth-child(2) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(600);
-//         }
-//         &__text {
-//           max-width: toIndex(320);
-//         }
-//       }
-//     }
-//     &:nth-child(3) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(510);
-//         }
-//         &__text {
-//           max-width: toIndex(340);
-//         }
-//       }
-//     }
-//     &:nth-child(4) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(490);
-//         }
-//         &__text {
-//           max-width: toIndex(340);
-//         }
-//       }
-//     }
-//     &:nth-child(5) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(440);
-//         }
-//         &__text {
-//           max-width: toIndex(470);
-//         }
-//       }
-//     }
-//     &:nth-child(6) {
-//       .inside-card {
-//         &__title {
-//           max-width: toIndex(460);
-//         }
-//         &__text {
-//           max-width: toIndex(360);
-//         }
-//       }
-//     }
-//   }
-// }
+@media (min-width: 1200px) {
+  .inside {
+    &__header {
+      padding-left: toIndex(500);
+      margin-bottom: toIndex(140);
+    }
+    &__icon {
+      width: toIndex(174);
+    }
+    &__title {
+      font-size: toIndex(133);
+    }
+    &__list {
+      gap: toIndex(45);
+    }
+    &__list-item {
+      &:nth-child(1) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(450);
+          }
+          &__text {
+            max-width: toIndex(500);
+          }
+        }
+      }
+      &:nth-child(2) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(600);
+          }
+          &__text {
+            max-width: toIndex(320);
+          }
+        }
+      }
+      &:nth-child(3) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(510);
+          }
+          &__text {
+            max-width: toIndex(340);
+          }
+        }
+      }
+      &:nth-child(4) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(490);
+          }
+          &__text {
+            max-width: toIndex(340);
+          }
+        }
+      }
+      &:nth-child(5) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(440);
+          }
+          &__text {
+            max-width: toIndex(470);
+          }
+        }
+      }
+      &:nth-child(6) {
+        .inside-card {
+          &__title {
+            max-width: toIndex(460);
+          }
+          &__text {
+            max-width: toIndex(360);
+          }
+        }
+      }
+    }
+  }
 
-// .inside-card {
-//   display: grid;
-//   gap: toIndex(20);
-//   grid-template-columns: calc(55% - 10px) calc(45% - 10px);
-//   position: relative;
-//   &__left {
-//     background: #242424;
-//     padding: toIndex(130) 0 toIndex(130) toIndex(150);
-//     position: relative;
-//   }
-//   &__right {
-//     display: flex;
-//     align-items: center;
-//     background: #242424;
-//     position: relative;
-//     padding: 0 toIndex(80) 0 toIndex(200);
-//   }
-//   &__title {
-//     font-weight: 800;
-//     font-size: toIndex(66);
-//     line-height: 96%;
-//     letter-spacing: -0.033em;
-//     color: #ffffff;
-//   }
-//   &__label {
-//     position: absolute;
-//     top: 50%;
-//     transform-origin: center center;
-//     transform: translateX(-50%) translateY(-50%) rotate(-90deg);
-//     left: toIndex(60);
-//     font-weight: 500;
-//     font-size: toIndex(23);
-//     line-height: 96%;
-//     color: #b6ff7d;
-//   }
-//   &__icon {
-//     position: absolute;
-//     top: 50%;
-//     left: 55%;
-//     transform: translate(-50%, -50%);
-//     width: toIndex(260);
-//     height: toIndex(260);
-//     border-radius: 50%;
-//     background: #b6ff7d;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     z-index: 1;
-//     img {
-//       max-width: 55%;
-//       max-height: 55%;
-//     }
-//   }
-//   &__number {
-//     position: absolute;
-//     top: toIndex(80);
-//     right: toIndex(80);
-//     font-weight: 500;
-//     font-size: toIndex(26);
-//     line-height: 123%;
-//     color: #ffffff;
-//     opacity: 0.2;
-//   }
-//   &__text {
-//     font-weight: 400;
-//     font-size: toIndex(33);
-//     line-height: 123%;
-//     color: #ffffff;
-//   }
-// }
+  .inside-card {
+    gap: toIndex(20);
+    grid-template-columns: calc(55% - 10px) calc(45% - 10px);
+    background-color: transparent;
+    padding-top: 0;
+    &__left {
+      padding: toIndex(130) 0 toIndex(130) toIndex(150);
+    }
+    &__right {
+      padding: 0 toIndex(80) 0 toIndex(200);
+      position: relative;
+    }
+    &__icon {
+      top: 50%;
+      left: 55%;
+      transform: translate(-50%, -50%);
+      width: toIndex(260);
+      height: toIndex(260);
+    }
+    &__title {
+      font-size: toIndex(66);
+      font-weight: 800;
+    }
+    &__label {
+      top: 50%;
+      transform-origin: center center;
+      transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+      left: toIndex(60);
+      font-size: toIndex(23);
+    }
+    &__text {
+      font-size: toIndex(33);
+    }
+    &__number {
+      font-size: toIndex(26);
+      top: toIndex(80);
+      right: toIndex(80);
+    }
+  }
+}
