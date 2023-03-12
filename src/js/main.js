@@ -5,6 +5,7 @@ import lottie from 'lottie-web';
 
 import './modules/dont.js';
 import './modules/connect.js';
+import './modules/stats.js';
 import './modules/buy-custom.js';
 import './modules/offline.js';
 import './modules/form.js';
