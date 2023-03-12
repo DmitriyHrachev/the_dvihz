@@ -11,8 +11,30 @@
 // COMPONENTS
 @import './components/container';
 @import './components/header';
-@import './components/promo';
+@import './components/btn-circle-arrow';
+@import './components/ticker';
 
 // BLOCKS
+@import './blocks/promo';
+@import './blocks/video';
+@import './blocks/about';
 @import './blocks/people';
+@import './blocks/inside';
+@import './blocks/dont';
+@import './blocks/connect';
+@import './blocks/quality';
+@import './blocks/stat';
+@import './blocks/goal';
 @import './blocks/feedbacks';
+@import './blocks/buy-custom';
+@import './blocks/offline';
+@import './blocks/form';
+@import './blocks/format-offline';
+@import './blocks/payment';
+@import './blocks/program';
+@import './blocks/buy';
+@import './blocks/footer';
+
+.title-anim__line {
+  overflow-y: hidden;
+}

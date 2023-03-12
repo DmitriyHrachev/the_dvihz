@@ -7,8 +7,9 @@
     position: relative;
   }
   &__title {
+    font-family: Manrope;
     width: min-content;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(26);
     line-height: 113%;
     /* or 30px */
@@ -64,8 +65,7 @@
     max-height: 100%;
   }
   &__name {
-    font-family: 'TT Norms Pro';
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(14);
     line-height: 100%;
     /* identical to box height, or 14px */
@@ -183,10 +183,13 @@
     }
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: $breakpoint-xl) {
   .feedbacks {
     padding-top: toIndex(30);
     padding-bottom: toIndex(285);
+    &__title {
+      font-weight: 800;
+    }
     &__wrap {
       height: toIndex(1045);
     }
@@ -196,6 +199,7 @@
       margin-bottom: 35px;
     }
     &__name {
+      font-weight: 800;
       font-size: toIndex(23);
     }
     &:nth-child(1) {

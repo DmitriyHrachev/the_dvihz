@@ -12,7 +12,12 @@ export const html = () => {
           })
         )
       )
-      .pipe(includePartials())
+      .pipe(
+        includePartials({
+          prefix: '@@',
+          basepath: '@file',
+        })
+      )
       .pipe(app.plugins.replace(/@img\//g, 'img/'))
       .pipe(app.plugins.replace(/@styles\//g, 'styles/'))
       .pipe(app.plugins.replace(/@js\//g, 'js/'))

@@ -1,0 +1,79 @@
+.quality {
+  padding-top: toIndexMob(150);
+  padding-bottom: toIndexMob(85);
+  color: #fff;
+  position: relative;
+  &__title {
+    margin-bottom: toIndexMob(60);
+    max-width: toIndexMob(315);
+    font-weight: 800;
+    font-size: toIndexMob(36);
+    line-height: 99%;
+    /* or 36px */
+
+    letter-spacing: -0.033em;
+    text-indent: toIndexMob(60);
+  }
+  &__subtitle {
+    margin-bottom: toIndexMob(10);
+    font-weight: 700;
+    font-size: toIndexMob(14);
+    line-height: 113%;
+    /* identical to box height, or 16px */
+
+    letter-spacing: -0.033em;
+    opacity: 0.33;
+  }
+  &__name {
+    max-width: min-content;
+    font-weight: 500;
+    font-size: toIndexMob(62);
+    line-height: 96%;
+    /* or 60px */
+
+    letter-spacing: -0.033em;
+    text-transform: uppercase;
+  }
+  &__btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: toIndexMob(135);
+    transform: translate(15%, 15%);
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .quality {
+    padding-top: toIndex(255);
+    padding-bottom: toIndex(135);
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      gap: toIndex(50);
+    }
+    &__title {
+      max-width: toIndex(545);
+      text-indent: toIndex(70);
+      font-size: toIndex(66);
+    }
+    &__wrap {
+      padding-right: toIndex(75);
+    }
+    &__subtitle {
+      margin-bottom: toIndex(50);
+      font-size: toIndex(33);
+    }
+    &__name {
+      font-size: toIndex(175);
+    }
+    &__btn {
+      width: toIndex(355);
+      right: auto;
+      left: toIndex(275);
+      .btn-circle-arrow__icon {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}

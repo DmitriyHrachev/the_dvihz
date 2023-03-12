@@ -1,0 +1,106 @@
+.goal {
+  padding: toIndexMob(80) 0;
+  &__goal {
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__icon {
+    position: absolute;
+    top: 4%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    width: 15.87%;
+  }
+  &__before {
+    margin-left: auto;
+    margin-bottom: toIndexMob(-30);
+
+    width: 70%;
+    padding: toIndexMob(40);
+
+    border: 2px solid rgba($color: #ffffff, $alpha: 0.1);
+  }
+  &__before-icon {
+    top: 11%;
+    left: 17%;
+  }
+  &__date {
+    margin-bottom: toIndexMob(10);
+    font-weight: 800;
+    font-size: toIndexMob(10);
+    line-height: 113%;
+    /* or 11px */
+
+    letter-spacing: -0.033em;
+  }
+  &__text {
+    font-weight: 800;
+    font-size: toIndexMob(26);
+    line-height: 99%;
+    /* or 26px */
+
+    text-align: center;
+    letter-spacing: -0.033em;
+  }
+  &__before-text {
+    max-width: toIndexMob(135);
+  }
+  &__after {
+    padding: toIndexMob(30);
+    background: #b6ff7d;
+    color: #000;
+  }
+  &__after-date {
+    font-size: toIndexMob(12);
+    text-align: right;
+  }
+  &__after-text {
+    max-width: toIndexMob(210);
+    font-size: toIndexMob(33);
+    font-weight: 800;
+  }
+}
+
+@media (min-width: $breakpoint-xl) {
+  .goal {
+    padding-top: toIndex(200);
+    padding-bottom: toIndex(400);
+    &__container {
+      position: relative;
+    }
+    &__goal-date {
+      margin-bottom: toIndex(15);
+      font-size: toIndex(22);
+    }
+    &__before {
+      padding: toIndex(155);
+      margin: 0;
+      width: 50.5%;
+    }
+    &__before-text {
+      max-width: toIndex(500);
+      font-size: toIndex(77);
+    }
+    &__after {
+      padding: toIndex(100);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 56.73%;
+      transform: translateY(20%);
+    }
+    &__after-date {
+      margin-bottom: toIndex(25);
+      font-size: toIndex(38);
+    }
+    &__after-text {
+      max-width: toIndex(700);
+      font-size: toIndex(110);
+    }
+  }
+}

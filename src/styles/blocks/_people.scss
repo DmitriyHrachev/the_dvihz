@@ -1,38 +1,12 @@
-.people-btn {
-  display: block;
-  aspect-ratio: 1;
-  width: 175px;
-  border-radius: 50%;
-  position: relative;
-  background-color: #b6ff7d;
-  cursor: pointer;
-  &__wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &__icon {
-    width: 15px;
-    transition: $transition;
-  }
-  &:hover,
-  &:focus {
-    .people-btn__icon {
-      scale: 2;
-      rotate: 360deg;
-    }
-  }
-}
 .people {
-  padding-top: 40px;
-  padding-bottom: 160px;
+  padding-top: toIndexMob(110);
+  padding-bottom: toIndexMob(160);
   position: relative;
   background: #ffffff;
   &__title {
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(75);
     line-height: 113%;
     /* identical to box height, or 87px */
@@ -63,9 +37,9 @@
     margin-left: auto;
     width: max-content;
     align-self: flex-end;
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: toIndexMob(18);
     line-height: 99%;
     /* identical to box height, or 18px */
@@ -84,9 +58,9 @@
   }
   &__text {
     width: 100%;
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: toIndexMob(23);
     line-height: 99%;
     /* or 23px */
@@ -133,9 +107,9 @@
     background: #000;
   }
   &__text {
-    font-family: 'Basier Square';
+    font-family: 'Manrope';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     font-size: toIndexMob(20);
     line-height: 96%;
     /* or 20px */
@@ -297,7 +271,7 @@
 }
 @media (min-width: $breakpoint-xl) {
   .people {
-    padding-top: toIndex(185);
+    padding-top: toIndex(300);
     padding-bottom: toIndex(235);
     &__title {
       margin-bottom: toIndex(50);
@@ -334,6 +308,13 @@
     &__list {
       height: toIndex(1405);
     }
+    &__btn {
+      width: toIndex(355);
+      &__icon {
+        transform: rotateY(180deg);
+        width: toIndex(30);
+      }
+    }
   }
   .people-card {
     &__circle {
@@ -353,6 +334,7 @@
     }
     &__text {
       font-size: toIndex(66);
+      font-weight: 800;
     }
     &:nth-child(1) {
       top: toIndex(30);
@@ -413,13 +395,6 @@
       right: auto;
       left: toIndex(530);
       width: toIndex(295);
-    }
-  }
-  .people-btn {
-    width: toIndex(355);
-    &__icon {
-      transform: rotateY(180deg);
-      width: toIndex(30);
     }
   }
 }
