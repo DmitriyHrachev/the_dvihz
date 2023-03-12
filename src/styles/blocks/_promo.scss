@@ -129,7 +129,7 @@
     }
     &__scroll-label {
       left: auto;
-      right: toIndex(0);
+      right: 25px;
       bottom: 0;
     }
     &__bottom-container {
@@ -140,6 +140,14 @@
     &__bottom-left-group {
       margin-bottom: 0;
       position: relative;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .promo {
+    &__scroll-label {
+      right: 40px;
     }
   }
 }

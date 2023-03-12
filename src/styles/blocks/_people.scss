@@ -1,6 +1,6 @@
 .people {
-  padding-top: 40px;
-  padding-bottom: 160px;
+  padding-top: toIndexMob(110);
+  padding-bottom: toIndexMob(160);
   position: relative;
   background: #ffffff;
   &__title {
@@ -271,7 +271,7 @@
 }
 @media (min-width: $breakpoint-xl) {
   .people {
-    padding-top: toIndex(185);
+    padding-top: toIndex(300);
     padding-bottom: toIndex(235);
     &__title {
       margin-bottom: toIndex(50);
