@@ -54,6 +54,28 @@
     position: absolute;
     top: toIndexMob(10);
     left: toIndexMob(110);
+    span {
+      position: relative;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #000;
+      transition: $transition;
+      transform: scale(0);
+    }
+    &:hover {
+      color: #b6ff7d;
+      &::after {
+        transform: scale(1);
+      }
+    }
   }
 }
 
@@ -124,7 +146,8 @@
     }
     &__text {
       font-size: toIndex(28);
-      max-width: toIndex(200);
+      max-width: toIndex(220);
+      flex-shrink: 0;
       span {
         width: toIndex(20);
         display: inline-block;

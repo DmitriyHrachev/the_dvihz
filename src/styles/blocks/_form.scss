@@ -99,21 +99,61 @@
     min-width: max-content;
     border: 0;
     padding: 0;
-    border-bottom: 4px solid #fff;
     padding-bottom: toIndexMob(15);
     background: transparent;
     font-family: 'Manrope';
     font-weight: 800;
     font-size: toIndexMob(28);
     line-height: 99%;
-    /* identical to box height, or 28px */
-
     text-transform: uppercase;
     text-align: left;
     color: #ffffff;
     cursor: pointer;
+    transition: $transition;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      border-bottom: 4px solid #fff;
+      transition: $transition;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-bottom: 4px solid #fff;
+      transition: $transition;
+    }
     svg {
       width: toIndexMob(21);
+      transition: $transition;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: #b6ff7d;
+      border-color: #b6ff7d;
+      &::before {
+        transition-delay: 0.1s;
+        width: 100%;
+        border-color: #b6ff7d;
+      }
+      &::after {
+        width: 0;
+        border-color: #b6ff7d;
+      }
+      svg {
+        transform: scale(1.1);
+        path {
+          fill: #b6ff7d;
+        }
+      }
     }
   }
 

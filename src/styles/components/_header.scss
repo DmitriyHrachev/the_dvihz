@@ -27,8 +27,12 @@
     letter-spacing: 0.39em;
     text-transform: uppercase;
     color: #ffffff;
+    transition: $transition;
     svg {
       width: toIndexMob(28);
+    }
+    &:hover {
+      letter-spacing: 0;
     }
   }
 }

@@ -1,6 +1,9 @@
 @import '/node_modules/reset-css/reset.css';
 @import './base/fonts';
 
+// PLUGINS
+@import '../../node_modules/@fancyapps/ui/dist/fancybox.css';
+
 // SETTINGS
 @import './settings/common';
 @import './settings/vars';

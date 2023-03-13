@@ -49,6 +49,7 @@
       width: 95%;
       height: 95%;
       animation: rotateAnimation 15s linear infinite;
+      will-change: transform;
     }
   }
   &__button {
@@ -66,14 +67,37 @@
     svg {
       margin-left: toIndexMob(40);
       width: toIndexMob(20);
+      transition: $transition;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      border-bottom: toIndex(5) solid currentColor;
+      transition: $transition;
     }
     &::after {
       content: '';
       position: absolute;
       bottom: 0;
-      left: 0;
+      right: 0;
       width: 100%;
       border-bottom: toIndex(5) solid currentColor;
+      transition: $transition;
+    }
+    &:hover {
+      svg {
+        transform: scale(1.1);
+      }
+      &::before {
+        transition-delay: 0.1s;
+        width: 100%;
+      }
+      &::after {
+        width: 0;
+      }
     }
   }
   &__text {

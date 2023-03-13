@@ -83,6 +83,15 @@
     bottom: 0;
     right: 15%;
     transform: translateY(50%);
+    svg {
+      transition: $transition;
+    }
+    &:hover {
+      svg {
+        scale: 2;
+        rotate: 360deg;
+      }
+    }
   }
 }
 

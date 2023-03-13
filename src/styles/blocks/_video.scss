@@ -50,6 +50,17 @@
     justify-content: center;
     background: #b6ff7d;
     mix-blend-mode: difference;
+    transition: $transition;
+    img {
+      transition: $transition;
+    }
+    &:hover {
+      transform: translateY(-10px);
+      img {
+        scale: 2;
+        rotate: 360deg;
+      }
+    }
   }
   &__img {
     position: absolute;

@@ -45,12 +45,54 @@
     max-width: toIndexMob(220);
     width: 100%;
     border: none;
-    border-bottom: 4px solid #fff;
     background-color: transparent;
     cursor: pointer;
-    img {
+    transition: $transition;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      border-bottom: 4px solid #fff;
+      transition: $transition;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      border-bottom: 4px solid #fff;
+      transition: $transition;
+    }
+    svg {
       width: toIndexMob(12);
       height: auto;
+      transition: $transition;
+      path {
+        transition: $transition;
+      }
+    }
+    &:hover {
+      color: #b6ff7d;
+      border-color: #b6ff7d;
+      svg {
+        transform: scale(1.1);
+        path {
+          fill: #b6ff7d;
+        }
+      }
+      &::after {
+        width: 0;
+        border-color: #b6ff7d;
+      }
+      &::before {
+        transition-delay: 0.1s;
+        width: 100%;
+        border-color: #b6ff7d;
+      }
     }
   }
 }
@@ -146,7 +188,7 @@
       font-size: toIndex(42);
       padding-bottom: toIndex(25);
       max-width: 500px;
-      img {
+      svg {
         width: toIndex(28);
       }
     }

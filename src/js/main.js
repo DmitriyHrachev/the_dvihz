@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from './modules/ScrollTrigger.js';
+import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox.js';
 
 import lottie from 'lottie-web';
 
