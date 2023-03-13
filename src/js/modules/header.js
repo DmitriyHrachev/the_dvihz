@@ -6,7 +6,8 @@ openButton.addEventListener('click', openMenu);
 
 menu.addEventListener('click', e => {
   const el = e.target;
-  if (el.hasAttribute('data-close-menu')) closeMenu();
+  if (el.hasAttribute('data-close-menu') || el.closest('[data-close-menu]'))
+    closeMenu();
 });
 
 function closeMenu() {
