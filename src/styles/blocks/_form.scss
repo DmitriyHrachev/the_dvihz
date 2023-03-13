@@ -8,7 +8,7 @@
 }
 .form {
   padding: toIndexMob(100) 0;
-  background: #000 url('/img/form-bg-mob.webp') center / cover no-repeat;
+  background: #000 url('../img/form-bg-mob.webp') center / cover no-repeat;
   color: #fff;
   &__title {
     margin-bottom: toIndexMob(35);
@@ -179,7 +179,7 @@
   .form {
     padding-top: toIndex(150);
     padding-bottom: toIndex(225);
-    background: #000 url('/img/form-bg-desktop.webp') center / cover no-repeat;
+    background: #000 url('../img/form-bg-desktop.webp') center / cover no-repeat;
 
     &__title {
       margin-bottom: toIndex(65);

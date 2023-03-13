@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     path:
       window.innerWidth < 1200
         ? '../files/promo-mob.json'
-        : '../files/promo-desk.json', // the path to the animation json
+        : '../files/promo-desk.json',
   });
   ScrollTrigger.refresh();
 });
