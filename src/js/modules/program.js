@@ -1,5 +1,22 @@
-const programButton = document.querySelector('.program__button');
-const programList = document.querySelector('.program__list');
+import gsap from 'gsap';
+import '../effects/titleAnimation.js';
+
+const sectionRef = document.querySelector('[data-section-program]');
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: sectionRef,
+    start: 'top center',
+  },
+});
+
+// TITLE ANIMATION
+
+const titleRef = sectionRef.querySelector('[data-title]');
+tl.titleAnim(titleRef, { split: false });
+
+const programButton = sectionRef.querySelector('.program__button');
+const programList = sectionRef.querySelector('.program__list');
 
 programButton.addEventListener('click', function () {
   this.classList.toggle('active');

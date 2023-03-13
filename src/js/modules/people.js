@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import '../effects/titleAnimation.js';
 
-const sectionRef = document.querySelector('[data-section-promo]');
+const sectionRef = document.querySelector('[data-section-people]');
 
 const tl = gsap.timeline({
   scrollTrigger: {

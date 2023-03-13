@@ -4,8 +4,13 @@ import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox.js';
 import lottie from 'lottie-web';
 
 import './modules/header.js';
+import './modules/promo.js';
+import './modules/video.js';
+import './modules/people.js';
+import './modules/inside.js';
 import './modules/dont.js';
 import './modules/connect.js';
+import './modules/quality.js';
 import './modules/stats.js';
 import './modules/program.js';
 import './modules/feedbacks.js';

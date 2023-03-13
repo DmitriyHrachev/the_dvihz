@@ -10,12 +10,16 @@
     letter-spacing: -0.033em;
     color: #ffffff;
     margin-bottom: toIndexMob(70);
-  }
-  &__title-row {
-    display: block;
-    &:last-child {
-      color: #b6ff7d;
+    .line {
+      overflow-y: hidden;
+      .word {
+        display: inline-block;
+      }
     }
+  }
+
+  &--color-accent {
+    color: #b6ff7d;
   }
   &__icon {
     position: absolute;
@@ -191,9 +195,6 @@
     }
     &__title {
       margin-bottom: toIndex(130);
-    }
-    &__title-row {
-      display: block;
     }
 
     &__footer {

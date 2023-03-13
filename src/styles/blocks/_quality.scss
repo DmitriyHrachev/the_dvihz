@@ -12,7 +12,16 @@
     /* or 36px */
 
     letter-spacing: -0.033em;
-    text-indent: toIndexMob(60);
+    .line {
+      overflow-y: hidden;
+    }
+
+    .line:first-child {
+      padding-left: toIndexMob(60);
+    }
+    .word {
+      display: inline-block;
+    }
   }
   &__subtitle {
     margin-bottom: toIndexMob(10);
@@ -33,6 +42,9 @@
 
     letter-spacing: -0.033em;
     text-transform: uppercase;
+    .line {
+      overflow-y: hidden;
+    }
   }
   &__btn {
     position: absolute;
@@ -54,8 +66,10 @@
     }
     &__title {
       max-width: toIndex(545);
-      text-indent: toIndex(70);
       font-size: toIndex(66);
+      .line:first-child {
+        padding-left: toIndex(70);
+      }
     }
     &__wrap {
       padding-right: toIndex(75);

@@ -64,8 +64,8 @@ const textRef = selector('[data-text]');
 const tlText = gsap.timeline({
   scrollTrigger: {
     trigger: textRef,
-    start: 'top 60%',
-    end: 'bottom 40%',
+    start: 'top bottom',
+    end: 'center center',
     scrub: 5,
   },
 });

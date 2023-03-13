@@ -67,6 +67,10 @@
     bottom: toIndexMob(70);
     left: toIndexMob(60);
     width: 95%;
+    perspective: 1000px;
+  }
+  &__inner {
+    transform-origin: center;
   }
 }
 
