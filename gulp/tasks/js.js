@@ -3,7 +3,7 @@ import path from 'path';
 import vinylNamed from 'vinyl-named';
 export const js = () => {
   return app.gulp
-    .src(app.path.src.js, { sourcemaps: true })
+    .src(app.path.src.js, { sourcemaps: false })
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
@@ -15,7 +15,7 @@ export const js = () => {
     .pipe(vinylNamed())
     .pipe(
       webpack({
-        mode: 'development',
+        mode: 'production',
         devtool: 'inline-cheap-source-map',
         output: { filename: '[name].min.js' },
         resolve: {
