@@ -4,13 +4,32 @@
   &__inner {
     position: relative;
   }
-  &__title {
+  &__title-mob {
     font-weight: 800;
     font-size: toIndexMob(36);
     line-height: 1;
     letter-spacing: -0.033em;
     color: #000000;
     margin-bottom: toIndexMob(110);
+  }
+  &__title {
+    display: none;
+    font-weight: 800;
+    font-size: toIndexMob(36);
+    line-height: 1;
+    letter-spacing: -0.033em;
+    color: #000000;
+    margin-bottom: toIndexMob(110);
+  }
+  &__title-mob-row {
+    display: block;
+    white-space: nowrap;
+    &:first-child {
+      padding-left: toIndexMob(25);
+    }
+    &:nth-child(n + 3) {
+      padding-left: toIndexMob(25);
+    }
   }
   &__title-row {
     display: block;
@@ -65,6 +84,8 @@
     padding-bottom: toIndex(20);
     display: inline-block;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
     svg {
       margin-left: toIndexMob(40);
       width: toIndexMob(20);
@@ -108,7 +129,7 @@
     letter-spacing: -0.033em;
     text-indent: toIndex(66);
     color: #000000;
-    max-width: toIndexMob(100);
+    max-width: toIndexMob(135);
     margin-left: auto;
     position: relative;
     svg {
@@ -142,6 +163,10 @@
     &__title {
       font-size: toIndex(133);
       margin-bottom: 0;
+      display: block;
+    }
+    &__title-mob {
+      display: none;
     }
     &__title-row {
       display: block;

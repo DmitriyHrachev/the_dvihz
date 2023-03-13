@@ -41,7 +41,7 @@
     line-height: 96%;
     text-align: center;
     letter-spacing: -0.033em;
-    // color: #000000;
+    color: currentColor;
     img {
       position: absolute;
       top: 2.5%;
@@ -60,10 +60,12 @@
     font-size: toIndexMob(20);
     line-height: 1;
     text-transform: uppercase;
-    // color: #000000;
+    color: currentColor;
     padding-bottom: toIndex(20);
     display: inline-block;
     position: relative;
+    padding-left: 0;
+    padding-right: 0;
     svg {
       margin-left: toIndexMob(40);
       width: toIndexMob(20);
@@ -106,8 +108,8 @@
     line-height: 113%;
     letter-spacing: -0.033em;
     text-indent: toIndex(66);
-    // color: #000000;
-    max-width: toIndexMob(100);
+    color: currentColor;
+    max-width: toIndexMob(135);
     margin-left: auto;
     position: relative;
     svg {
@@ -182,6 +184,9 @@
         margin-left: toIndex(70);
         width: toIndex(20);
       }
+    }
+    &__logo {
+      display: block;
     }
   }
 }
