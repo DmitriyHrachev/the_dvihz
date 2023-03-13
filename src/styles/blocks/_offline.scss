@@ -31,6 +31,12 @@
     font-weight: 800;
     font-size: toIndexMob(66);
     line-height: 96%;
+    span {
+      display: inline-block;
+    }
+    .line {
+      overflow-y: hidden;
+    }
   }
 
   &__list-wrap {

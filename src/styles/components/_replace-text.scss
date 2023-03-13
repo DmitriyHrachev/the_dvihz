@@ -1,0 +1,15 @@
+.replace-text {
+  display: inline-block;
+  position: relative;
+  overflow-y: hidden;
+  &__before,
+  &__after {
+    display: inline-block;
+    position: relative;
+  }
+  &__after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}

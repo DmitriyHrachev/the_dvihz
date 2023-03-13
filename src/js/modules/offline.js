@@ -41,7 +41,25 @@ const titleTl = gsap.timeline({
     // markers: true,
   },
 });
-titleTl.titleAnim(selector('[data-title]'));
+const titleRef = sectionRef.querySelector('[data-title]');
+titleTl.titleAnim(titleRef, { split: false });
+
+// Replace text
+{
+  const elRef = sectionRef.querySelector('[data-replace-text]');
+  const textBefore = elRef.textContent;
+  const textAfter = elRef.getAttribute('data-replace-text');
+  elRef.innerHTML = `<span class="replace-text__before">${textBefore}</span><span class="replace-text__after">${textAfter}</span>`;
+
+  const beforeRef = elRef.querySelector('.replace-text__before');
+  const afterRef = elRef.querySelector('.replace-text__after');
+
+  titleTl.to([beforeRef, afterRef], {
+    delay: 0.25,
+    stagger: 0.25,
+    yPercent: -100,
+  });
+}
 const textRef = selector('[data-text]');
 const tlText = gsap.timeline({
   scrollTrigger: {
