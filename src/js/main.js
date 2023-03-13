@@ -1,9 +1,9 @@
 import gsap from 'gsap';
 import ScrollTrigger from './modules/ScrollTrigger.js';
 import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox.js';
-
 import lottie from 'lottie-web';
 
+import './modules/header.js';
 import './modules/dont.js';
 import './modules/connect.js';
 import './modules/stats.js';

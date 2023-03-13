@@ -1,5 +1,3 @@
-import gsap from 'gsap';
-
 const programButton = document.querySelector('.program__button');
 const programList = document.querySelector('.program__list');
 
