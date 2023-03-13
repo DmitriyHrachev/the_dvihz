@@ -17,7 +17,7 @@ formRef.addEventListener('submit', e => {
   const formData = new FormData(e.target);
   toggleLoading();
   axios
-    .post('http://php-learn/the_dvizh/form.php', formData)
+    .post('/form.php', formData)
     .then(() => (window.location.href = '/thanks.html'))
     .catch(() => console.log('Something went wrong'))
     .finally(() => {
