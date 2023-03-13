@@ -26,6 +26,19 @@
   &__list {
     border-top: 3px solid #fff;
     padding-top: toIndexMob(30);
+    &.active {
+      .program__list-item {
+        &:nth-child(4) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__list-item {
+    overflow: hidden;
+    &:nth-child(n + 4) {
+      display: none;
+    }
   }
   &__footer {
     padding-top: toIndexMob(60);
@@ -104,6 +117,8 @@
   display: grid;
   align-items: center;
   grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+
   &__title {
     font-weight: 500;
     font-size: toIndexMob(36);
