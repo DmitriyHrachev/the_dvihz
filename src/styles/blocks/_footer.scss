@@ -154,6 +154,7 @@
       left: 0;
       width: 100%;
       border-bottom: 1px solid #b6ff7d;
+      transition: $transition;
     }
   }
   &__circle {
@@ -170,8 +171,24 @@
     justify-content: center;
     z-index: -1;
     svg {
+      transition: $transition;
       width: toIndexMob(10);
       height: auto;
+    }
+  }
+  &:hover {
+    .insta {
+      &__circle {
+        svg {
+          zoom: 2;
+          rotate: 360deg;
+        }
+      }
+      &__text {
+        &::after {
+          width: 0;
+        }
+      }
     }
   }
 }
