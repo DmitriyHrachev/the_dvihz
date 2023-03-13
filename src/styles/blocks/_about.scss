@@ -45,7 +45,9 @@
         border-bottom: 2px solid #fff;
         transition: $transition;
       }
-      &:hover {
+    }
+    &:hover {
+      span {
         &::after {
           width: 0;
         }

@@ -17,3 +17,24 @@ body {
 a {
   text-decoration: none;
 }
+
+.fancybox__content {
+  border: 40px solid #b6ff7d;
+  @media (max-width: 767px) {
+    border: 20px solid #b6ff7d;
+  }
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.fancybox__button--fullscreen {
+  display: none !important;
+}
+.fancybox__button--zoom {
+  display: none !important;
+}
+.fancybox__button--close {
+  color: #b6ff7d;
+}

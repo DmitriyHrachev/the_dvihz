@@ -26,6 +26,7 @@
 .feedback {
   position: absolute;
   cursor: pointer;
+  display: block;
   &__wrap {
     margin-bottom: 10px;
 
@@ -73,14 +74,9 @@
     font-weight: 800;
     font-size: toIndexMob(14);
     line-height: 100%;
-    /* identical to box height, or 14px */
-
+    color: #fff;
     text-align: center;
     letter-spacing: -0.033em;
-
-    /* #ffff */
-
-    // color: #ffffff;
   }
   &:nth-child(1) {
     top: toIndexMob(-30);
