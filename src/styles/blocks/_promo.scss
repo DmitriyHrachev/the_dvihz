@@ -47,19 +47,23 @@
     font-family: Manrope;
     font-weight: 800;
     font-size: toIndexMob(48);
-    line-height: 1;
+    line-height: 1.2;
     letter-spacing: -0.033em;
     color: #ffffff;
-  }
-  &__title-row {
-    display: block;
-    &:not(:last-child) {
-      margin-bottom: toIndex(-10);
+    vertical-align: middle;
+    .word {
+      display: inline-block;
     }
-    &:nth-child(2) {
-      margin-left: toIndex(130);
+    .line {
+      overflow-y: hidden;
+      margin-top: -0.2em;
+      margin-bottom: -0.2em;
+      &:nth-child(2) {
+        margin-left: toIndex(130);
+      }
     }
   }
+
   &__text {
     position: absolute;
     bottom: toIndexMob(160);

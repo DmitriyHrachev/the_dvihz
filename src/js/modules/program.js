@@ -7,6 +7,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: sectionRef,
     start: 'top center',
+    // markers: true,
   },
 });
 

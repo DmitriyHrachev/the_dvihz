@@ -35,6 +35,8 @@ titleTl.titleAnim(selector('[data-title]')[0]);
         start: 'center center',
         end: () => '+=' + getScrollLength(),
         pin: true,
+        // pinSpacer: true,
+        refreshPriority: 1,
         scrub: 0.1,
       },
       ease: 'none',

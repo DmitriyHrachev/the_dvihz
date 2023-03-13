@@ -12,19 +12,22 @@ import './modules/dont.js';
 import './modules/connect.js';
 import './modules/quality.js';
 import './modules/stats.js';
-import './modules/program.js';
 import './modules/feedbacks.js';
-import './modules/buy-custom.js';
 import './modules/offline.js';
 import './modules/form.js';
 import './modules/format.js';
+import './modules/program.js';
+import './modules/buy-custom.js';
 window.addEventListener('DOMContentLoaded', () => {
   lottie.loadAnimation({
     container: document.getElementById('lottie'), // the dom element that will contain the animation
     renderer: 'canvas',
     loop: true,
     autoplay: true,
-    path: '../files/promo-animation.json', // the path to the animation json
+    path:
+      window.innerWidth < 1200
+        ? '../files/promo-mob.json'
+        : '../files/promo-desk.json', // the path to the animation json
   });
   ScrollTrigger.refresh();
 });
