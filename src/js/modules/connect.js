@@ -27,6 +27,8 @@ mm.add('(min-width: 1024px)', () => {
     end: () => `bottom-=${containerToPin.clientHeight / 2} center`,
     pin: true,
     pinSpacing: false,
+    refreshPriority: 1,
+
     // markers: true,
   });
 

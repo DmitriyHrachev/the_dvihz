@@ -37,6 +37,9 @@
     .line {
       overflow-y: hidden;
     }
+    .replace-text {
+      transform: translateY(10%);
+    }
   }
 
   &__list-wrap {
