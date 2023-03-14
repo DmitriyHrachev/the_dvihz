@@ -42,12 +42,17 @@
     color: #f9f9f9;
   }
   &__form {
+    span {
+      display: block;
+      &:not(:last-child) {
+        margin-bottom: toIndexMob(40);
+      }
+    }
   }
   &__group {
-    margin-bottom: toIndexMob(55);
+    margin-bottom: toIndexMob(40);
     display: flex;
     flex-direction: column;
-    gap: toIndexMob(45);
   }
   &__input {
     padding: 0;
@@ -67,18 +72,18 @@
     transition: $transition;
     // opacity: 0.44;
     border-color: rgba($color: #f9f9f9, $alpha: 0.44);
-    &:-webkit-autofill {
-      background-color: transparent !important;
-      -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 1) inset !important;
-      -webkit-text-fill-color: #f9f9f9 !important;
-      color: #f9f9f9 !important;
-    }
+    // &:-webkit-autofill {
+    //   background-color: transparent !important;
+    //   -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 1) inset !important;
+    //   -webkit-text-fill-color: #f9f9f9 !important;
+    //   color: #f9f9f9 !important;
+    // }
     &:focus,
     &:not(:placeholder-shown) {
       outline: none;
       border-color: #fff;
     }
-    &:not(:placeholder-shown):invalid {
+    &.wpcf7-not-valid {
       border-color: red;
     }
   }
@@ -111,24 +116,7 @@
     cursor: pointer;
     transition: $transition;
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      border-bottom: 4px solid #fff;
-      transition: $transition;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      border-bottom: 4px solid #fff;
-      transition: $transition;
-    }
+    border-bottom: 4px solid #fff;
     svg {
       width: toIndexMob(21);
       transition: $transition;
@@ -202,13 +190,20 @@
       font-size: toIndex(33);
       line-height: 123%;
     }
-    &__form {
-      width: 100%;
+    &__row {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: min-content;
-      //   align-items: stretch;
-      gap: toIndex(105);
+      gap: toIndex(110);
+      margin-bottom: toIndex(105);
+    }
+    &__col {
+      &:nth-child(2) {
+        p,
+        span {
+          height: 100%;
+        }
+      }
     }
     &__group {
       margin-bottom: 0;
@@ -247,4 +242,12 @@
       left: 0;
     }
   }
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
+
+.wpcf7-response-output {
+  display: none;
 }
