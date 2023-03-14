@@ -30,4 +30,5 @@ programButton.addEventListener('click', function () {
     textContainer.innerHTML = 'Уся программа';
     programList.classList.remove('active');
   }
+  ScrollTrigger.refresh();
 });
