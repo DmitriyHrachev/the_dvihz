@@ -101,6 +101,21 @@
 
 .people-card {
   position: absolute;
+  &:hover {
+    .people-card__photo {
+      opacity: 0;
+    }
+    .people-card__video {
+      opacity: 1;
+    }
+  }
+  &__clippath {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
   &__circle {
     margin-bottom: 15px;
     aspect-ratio: 1;
@@ -108,11 +123,19 @@
     border-radius: 50%;
     background: #000;
   }
-  &__photo {
+  &__media {
     display: block;
     width: 100%;
+    height: 100%;
     max-width: 100%;
     max-height: 100%;
+    transition: $transition;
+  }
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
   }
   &__square {
     margin-bottom: 15px;
@@ -154,6 +177,7 @@
     top: toIndexMob(155);
     left: toIndexMob(25);
     width: toIndexMob(115);
+    clip-path: circle(50% at 50% 50%);
   }
   &:nth-child(4) {
     top: toIndexMob(155);
@@ -164,6 +188,7 @@
     top: toIndexMob(290);
     left: 0;
     width: toIndexMob(110);
+    clip-path: circle(50% at 50% 50%);
   }
   &:nth-child(6) {
     top: toIndexMob(290);
@@ -179,6 +204,7 @@
     top: toIndexMob(440);
     right: toIndexMob(80);
     width: toIndexMob(100);
+    clip-path: url(#people-card__clippath-8);
   }
   &:nth-child(9) {
     top: toIndexMob(480);
