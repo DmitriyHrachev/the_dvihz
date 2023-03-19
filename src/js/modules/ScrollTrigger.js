@@ -5,4 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 ScrollTrigger.defaults({
   toggleActions: 'play none none reverse',
 });
+ScrollTrigger.config({
+  ignoreMobileResize: true,
+});
 export default ScrollTrigger;
