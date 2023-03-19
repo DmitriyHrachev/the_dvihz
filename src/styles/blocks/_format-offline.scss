@@ -27,15 +27,9 @@
 
     letter-spacing: -0.033em;
   }
-  &__list {
-    padding-right: 0;
-    display: flex;
-    flex-wrap: nowrap;
-    width: max-content;
-  }
 }
 .format-offline-card {
-  flex-shrink: 0;
+  margin: 0 auto;
   width: toIndexMob(315);
   aspect-ratio: 1;
   border: 1px solid #000;
@@ -51,7 +45,7 @@
   letter-spacing: -0.033em;
   transition: $transition;
   &:not(:last-child) {
-    margin-right: -5.35vw;
+    margin-bottom: toIndexMob(-40);
   }
   &--active {
     background: #000;
@@ -96,8 +90,6 @@
       margin-right: auto;
     }
     &__list {
-      padding-left: calc(50vw);
-      margin-left: toIndexMob(math.div(-$card-width, 2));
     }
   }
   .format-offline-card {
@@ -126,13 +118,23 @@
       font-weight: 800;
     }
     &__list {
+      padding-right: 0;
+      padding-left: calc(50vw);
+      display: flex;
+      flex-wrap: nowrap;
+      width: max-content;
       margin-left: toIndex(math.div(-$card-width, 2));
     }
   }
   .format-offline-card {
+    margin: 0;
+    flex-shrink: 0;
+
     width: toIndex($card-width);
     gap: toIndex(35);
+
     &:not(:last-child) {
+      margin: 0;
       margin-right: toIndex(-40);
     }
     &__title {

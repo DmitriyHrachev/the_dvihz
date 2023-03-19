@@ -1,6 +1,8 @@
 import gsap from 'gsap';
 import ScrollTrigger from './ScrollTrigger.js';
 import '../effects/titleAnimation.js';
+
+const MM = gsap.matchMedia();
 const sectionRef = document.querySelector('[data-section-format-offline]');
 const selector = gsap.utils.selector(sectionRef);
 const titleTl = gsap.timeline({
@@ -15,7 +17,7 @@ titleTl.titleAnim(selector('[data-title]')[0]);
 // HORIZONTAL SCROLL
 {
   const elRef = selector('[data-horizontal]')[0];
-  const cardsRef = elRef.querySelectorAll('[data-card]');
+  const cardsRef = [...elRef.querySelectorAll('[data-card]')];
 
   const getScrollLength = () => {
     const computedStyle = getComputedStyle(elRef);
@@ -27,7 +29,23 @@ titleTl.titleAnim(selector('[data-title]')[0]);
     return (elementWidth / cardsNumber) * (cardsNumber - 1);
   };
 
-  window.addEventListener('DOMContentLoaded', () => {
+  MM.add('(max-width: 1199px)', () => {
+    const cardAnimTweens = cardsRef.map(cardRef => {
+      return gsap.to(cardRef, {
+        scrollTrigger: {
+          trigger: cardRef,
+          start: '10% center',
+          end: '90% center',
+          toggleClass: 'format-offline-card--active',
+          markers: true,
+        },
+      });
+    });
+    return () => {
+      cardAnimTweens.forEach(tween => tween.revert());
+    };
+  });
+  MM.add('(min-width: 1200px)', () => {
     const tween = gsap.to(elRef, {
       x: () => -getScrollLength(),
       scrollTrigger: {
@@ -41,8 +59,8 @@ titleTl.titleAnim(selector('[data-title]')[0]);
       },
       ease: 'none',
     });
-    cardsRef.forEach(cardRef => {
-      gsap.to(cardRef, {
+    const cardAnimTweens = cardsRef.map(cardRef => {
+      return gsap.to(cardRef, {
         scrollTrigger: {
           trigger: cardRef,
           start: '10% center',
@@ -54,5 +72,9 @@ titleTl.titleAnim(selector('[data-title]')[0]);
         },
       });
     });
+    return () => {
+      tween.revert();
+      cardAnimTweens.forEach(tween => tween.revert());
+    };
   });
 }
