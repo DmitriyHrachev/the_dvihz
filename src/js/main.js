@@ -6,24 +6,27 @@ import lottie from 'lottie-web';
 window.history.scrollRestoration = 'manual';
 ScrollTrigger.clearScrollMemory('manual');
 
-let vh = window.innerHeight * 0.01;
-let vw = window.innerWidth * 0.01;
+let vh = window.innerHeight;
+let vw = window.innerWidth;
 function setVPSize() {
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-  document.documentElement.style.setProperty('--vw', `${vw}px`);
+  vh = window.innerHeight;
+  vw = window.innerWidth;
+  document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
+  document.documentElement.style.setProperty('--vw', `${vw * 0.01}px`);
 }
-function relDiff(a, b) {
-  return 100 * Math.abs((a - b) / ((a + b) / 2));
+function relDiff(x, y) {
+  return Math.abs(1 - x / y) * 100;
 }
 setVPSize();
 window.addEventListener('resize', () => {
   const BREAKPOINT = 25,
-    newVH = window.innerHeight * 0.01,
-    newVW = window.innerWidth * 0.01,
-    differenceVH = (newVH, vh),
-    differenceVW = (newVW, vw);
-
+    newVH = window.innerHeight,
+    newVW = window.innerWidth,
+    differenceVH = relDiff(newVH, vh),
+    differenceVW = relDiff(newVW, vw);
+  console.log(differenceVH);
   if (differenceVH > BREAKPOINT || differenceVW > BREAKPOINT) {
+    console.log('resize');
     setVPSize();
     ScrollTrigger.refresh();
   }
