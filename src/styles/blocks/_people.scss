@@ -131,11 +131,14 @@
     max-height: 100%;
     transition: $transition;
   }
+  &__photo {
+    opacity: 0;
+  }
   &__video {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
+    opacity: 1;
   }
   &__square {
     margin-bottom: 15px;
@@ -375,6 +378,12 @@
     &__text {
       font-size: toIndex(66);
       font-weight: 800;
+    }
+    &__photo {
+      opacity: 1;
+    }
+    &__video {
+      opacity: 0;
     }
     &:nth-child(1) {
       top: toIndex(30);

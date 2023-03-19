@@ -2,8 +2,15 @@ import gsap from 'gsap';
 import ScrollTrigger from './modules/ScrollTrigger.js';
 import { Fancybox } from '@fancyapps/ui/src/Fancybox/Fancybox.js';
 import lottie from 'lottie-web';
+
 window.history.scrollRestoration = 'manual';
 ScrollTrigger.clearScrollMemory('manual');
+
+const vh = window.innerHeight * 0.01;
+const vw = window.innerWidth * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty('--vw', `${vw}px`);
+
 import './modules/header.js';
 import './modules/promo.js';
 import './modules/video.js';
@@ -22,8 +29,8 @@ import './modules/buy-custom.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   lottie.loadAnimation({
-    container: document.getElementById('lottie'), // the dom element that will contain the animation
-    renderer: 'canvas',
+    container: document.getElementById('lottie'),
+    renderer: 'svg',
     loop: true,
     autoplay: true,
     path:
@@ -31,5 +38,4 @@ window.addEventListener('DOMContentLoaded', () => {
         ? '../files/promo-mob.json'
         : '../files/promo-desk.json',
   });
-  // ScrollTrigger.refresh();
 });

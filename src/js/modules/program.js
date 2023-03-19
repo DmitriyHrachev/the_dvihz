@@ -27,7 +27,7 @@ programButton.addEventListener('click', function () {
     textContainer.innerHTML = 'Cховати';
     programList.classList.add('active');
   } else {
-    textContainer.innerHTML = 'Уся программа';
+    textContainer.innerHTML = 'Уся програма';
     programList.classList.remove('active');
   }
   ScrollTrigger.refresh();

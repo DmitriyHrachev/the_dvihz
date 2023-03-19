@@ -124,6 +124,9 @@
         transition: $transition;
       }
     }
+    &:focus {
+      outline: none;
+    }
     &:hover {
       color: #b6ff7d;
       border-color: #b6ff7d;
@@ -249,5 +252,8 @@
 }
 
 .wpcf7-response-output {
-  display: none;
+  border: none !important;
+  background-color: #b6ff7d !important;
+  color: #000 !important;
+  padding: 10px !important;
 }

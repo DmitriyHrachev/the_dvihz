@@ -160,10 +160,13 @@
       left: 0;
       transform: translateY(-50%);
       font-size: toIndex(40);
+      width: toIndex(450);
+      height: toIndex(450);
     }
     &__subtitle {
       font-size: toIndex(36);
       max-width: toIndex(660);
+      margin-bottom: 0;
     }
     &__line {
       margin-top: auto;

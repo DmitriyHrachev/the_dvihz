@@ -27,7 +27,7 @@
     flex-grow: 0;
     flex-shrink: 0;
     animation-fill-mode: none;
-    will-change: transform;
+    // will-change: transform;
     animation-duration: var(--ticker-duration, $def-duration);
     animation-iteration-count: infinite;
     animation-timing-function: linear;
